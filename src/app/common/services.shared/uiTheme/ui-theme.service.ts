@@ -30,25 +30,25 @@ export class UiThemeService {
     const root = document.documentElement;
     const computedStyle = getComputedStyle(root);
 
+    const primaryColor = computedStyle.getPropertyValue(
+      `--${currentTheme}-primary-color`
+    );
     const secondaryColor = computedStyle.getPropertyValue(
       `--${currentTheme}-secondary-color`
     );
     const tertiaryColor = computedStyle.getPropertyValue(
       `--${currentTheme}-tertiary-color`
     );
-    const primaryFontColor = computedStyle.getPropertyValue(
-      `--${currentTheme}-primary-font-color`
-    );
 
+    document.documentElement.style.setProperty(
+      '--primary-color',
+      primaryColor
+    );
     document.documentElement.style.setProperty(
       '--secondary-color',
       secondaryColor
     );
     document.documentElement.style.setProperty('--tertiary-color', tertiaryColor);
-    document.documentElement.style.setProperty(
-      '--primary-font-color',
-      primaryFontColor
-    );
   }
 
   changeUiTheme() {
