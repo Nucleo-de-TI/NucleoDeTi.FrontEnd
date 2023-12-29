@@ -1,0 +1,29 @@
+footer {
+  border-top: var(--default-border-size) solid var(--primary-color);
+}
+
+div.father {
+  color: var(--primary-color);
+}
+
+div.father__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 72px;
+  width: 100%;
+
+  @media (min-width: 1300px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+div.father__content__brand-image {
+  width: 72px;
+}
+
+h4 {
+  text-align: center;
+}

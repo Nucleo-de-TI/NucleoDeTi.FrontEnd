@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-regular-brand-logo',
@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './regular-brand-logo.component.scss'
 })
 export class RegularBrandLogoComponent {
+  @Input() src?: string;
 
+  ngOnInit(): void {
+    if (!this.src) {
+      this.src = "./assets/images/brand/logo.png"
+    }
+  }
 }

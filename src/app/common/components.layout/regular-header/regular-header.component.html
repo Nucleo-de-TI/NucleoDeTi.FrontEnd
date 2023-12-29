@@ -78,10 +78,10 @@
         </app-small-vertical-padding>
       </app-regular-section>
     </div>
+    <button
+      class="global__default-animation-process father__disable-slide-menu-list"
+      [ngClass]="slideMenuClassController"
+      (click)="onSlideMenuButtonClick()"
+    ></button>
   </div>
 </header>
-<button
-  class="global__default-animation-process disable-slide-menu-list"
-  [ngClass]="slideMenuClassController"
-  (click)="onSlideMenuButtonClick()"
-></button>

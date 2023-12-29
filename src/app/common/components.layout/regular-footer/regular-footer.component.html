@@ -1,0 +1,57 @@
+<footer>
+  <app-regular-section>
+    <app-regular-vertical-padding>
+      <div class="father">
+        <div class="father__content">
+          <div class="father__content__brand-image">
+            <app-regular-brand-icon
+              [src]="'./assets/images/brand/icon.blue.png'"
+            ></app-regular-brand-icon>
+          </div>
+          <app-regular-list [model]="infoList">
+            <li>
+              <h4>
+                {{ model.infos[0].title }}
+              </h4>
+            </li>
+            <li *ngFor="let message of model.infos[0].messages">
+              <p>
+                <app-regular-text>
+                  {{ message }}
+                </app-regular-text>
+              </p>
+            </li>
+          </app-regular-list>
+          <div class="father__content__link-list">
+            <app-regular-list [model]="linkList">
+              <li *ngFor="let link of model.links">
+                <app-medium-text-link [href]="link.href">
+                  <i class="{{ link.icon }}"></i>
+                </app-medium-text-link>
+              </li>
+            </app-regular-list>
+          </div>
+          <app-regular-list [model]="infoList">
+            <li>
+              <h4>
+                {{ model.infos[1].title }}
+              </h4>
+            </li>
+            <li *ngFor="let message of model.infos[1].messages">
+              <p>
+                <app-regular-text>
+                  {{ message }}
+                </app-regular-text>
+              </p>
+            </li>
+          </app-regular-list>
+          <div class="father__content__brand-image">
+            <app-regular-uniso-icon
+              [src]="'./assets/images/uniso/icon.blue.png'"
+            ></app-regular-uniso-icon>
+          </div>
+        </div>
+      </div>
+    </app-regular-vertical-padding>
+  </app-regular-section>
+</footer>

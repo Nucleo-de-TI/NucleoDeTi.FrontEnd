@@ -8,7 +8,7 @@ import { RegularListComponent } from '../../components.shared/regular-list/regul
 import { IRegularList } from '../../models.shared/regular-list/regular-list';
 import { AnimatedTextLinkComponent } from '../../components.shared/animated-text-link/animated-text-link.component';
 import { CommonModule } from '@angular/common';
-import { IDefaultHeader } from '../../models.layout/regular-header/regular-header';
+import { IRegularHeader } from '../../models.layout/regular-header/regular-header';
 import { RegularTextLinkComponent } from '../../components.shared/regular-text-link/regular-text-link.component';
 import { RegularTextButtonComponent } from '../../components.shared/regular-text-button/regular-text-button.component';
 import { MediumTextLinkComponent } from "../../components.shared/medium-text-link/medium-text-link.component";
@@ -35,7 +35,7 @@ import { MediumTextButtonComponent } from "../../components.shared/medium-text-b
     ]
 })
 export class RegularHeaderComponent {
-  @Input() model!: IDefaultHeader;
+  @Input() model!: IRegularHeader;
 
   readonly socialHubList: IRegularList = {
     style: {
