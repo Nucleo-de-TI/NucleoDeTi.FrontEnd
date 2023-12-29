@@ -1,0 +1,19 @@
+span {
+  &:hover::after {
+    width: 100%;
+  }
+
+  &::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: inherit;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+  }
+
+  pointer-events: all;
+  position: relative;
+}

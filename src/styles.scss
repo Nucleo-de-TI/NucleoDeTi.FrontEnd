@@ -1,0 +1,100 @@
+:root {
+  --yellow: #fbed21;
+  --black-translucent-effect: rgba(0, 0, 0, 0.315);
+
+  --primary-color: #161d43;
+  --secondary-color: #eaebfb;
+  --tertiary-color: white;
+  --primary-font-color: #161d43;
+
+  --light-primary-color: #161d43;
+  --light-secondary-color: #eaebfb;
+  --light-tertiary-color: white;
+  --light-primary-font-color: #161d43;
+
+  --dark-primary-color: #161d43;
+  --dark-secondary-color: #1E1E1E;
+  --dark-tertiary-color: #1E1E1E;
+  --dark-primary-font-color: white;
+}
+
+* {
+  &::-webkit-scrollbar {
+    width: 17.5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 70px;
+    border: 4.9px solid white;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: white;
+  }
+
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scrollbar-width: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+header,
+main,
+footer {
+  min-width: 300px;
+}
+
+body {
+  background-color: var(--secondary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 110%;
+  letter-spacing: 1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  cursor: default;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  pointer-events: none;
+}
+
+a,
+button,
+ul,
+li {
+  all: unset;
+}
+
+a,
+button {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.global__default-animation-process {
+  transition: ease-in-out 0.35s;
+}

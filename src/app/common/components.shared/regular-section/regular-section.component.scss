@@ -1,0 +1,15 @@
+div.father {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 28px;
+
+  div {
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  @media (min-width: 800px) {
+    padding: 0px 68px;
+  }
+}
