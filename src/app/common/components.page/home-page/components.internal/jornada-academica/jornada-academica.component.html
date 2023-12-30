@@ -1,0 +1,52 @@
+<div class="father">
+  <app-big-section-box>
+    <div class="father__jornada-academica">
+      <app-regular-section-box-title>
+        Jornada Acadêmica 2023
+      </app-regular-section-box-title>
+      <app-regular-flex-box
+        [model]="{
+          style: {
+            'flex-direction': 'column',
+            'justify-content': 'space-between',
+            'align-items': 'center',
+            gap: '8px'
+          },
+          media: [
+            {
+              'min-width': 600,
+              style: {
+                'flex-direction': 'row',
+                'justify-content': 'space-between',
+                'align-items': 'center',
+                gap: '8px'
+              }
+            }
+          ]
+        }"
+      >
+        <a class="father__jornada-academica__image" href="#">
+          <img
+            src="./assets/images/general/gocstvqqptrr.png"
+            alt="Computer Image"
+          />
+        </a>
+        <a class="father__jornada-academica__image" href="#">
+          <img
+            src="./assets/images/general/gocstvqqptrr.png"
+            alt="Computer Image"
+          />
+        </a>
+        <a class="father__jornada-academica__image" href="#">
+          <img
+            src="./assets/images/general/gocstvqqptrr.png"
+            alt="Computer Image"
+          />
+        </a>
+      </app-regular-flex-box>
+      <app-border-text-link [href]="'#'" [model]="{ style: { color: 'blue' } }">
+        Ver eventos
+      </app-border-text-link>
+    </div>
+  </app-big-section-box>
+</div>

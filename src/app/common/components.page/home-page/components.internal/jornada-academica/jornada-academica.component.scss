@@ -1,0 +1,23 @@
+div.father__jornada-academica {
+  color: var(--primary-color);
+}
+
+a.father__jornada-academica__image {
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+
+  @media (min-width: 600px) {
+    &:last-of-type {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    &:last-of-type {
+      display: initial;
+    }
+  }
+}

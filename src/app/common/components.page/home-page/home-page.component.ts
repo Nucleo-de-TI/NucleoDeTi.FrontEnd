@@ -14,6 +14,9 @@ import { RegularHorizontalPaddingComponent } from '../../components.shared/regul
 import { BigSectionBoxComponent } from "../../components.shared/big-section-box/big-section-box.component";
 import { SmallSectionBoxComponent } from "../../components.shared/small-section-box/small-section-box.component";
 import { BorderTextLinkComponent } from "../../components.shared/border-text-link/border-text-link.component";
+import { ServicosDoNucleoComponent } from "./components.internal/servicos-do-nucleo/servicos-do-nucleo.component";
+import { ProjetosParaParceirosComponent } from "./components.internal/projetos-para-parceiros/projetos-para-parceiros.component";
+import { JornadaAcademicaComponent } from "./components.internal/jornada-academica/jornada-academica.component";
 
 @Component({
     selector: 'app-home-page',
@@ -31,7 +34,10 @@ import { BorderTextLinkComponent } from "../../components.shared/border-text-lin
         RegularHorizontalPaddingComponent,
         BigSectionBoxComponent,
         SmallSectionBoxComponent,
-        BorderTextLinkComponent
+        BorderTextLinkComponent,
+        ServicosDoNucleoComponent,
+        ProjetosParaParceirosComponent,
+        JornadaAcademicaComponent
     ]
 })
 export class HomePageComponent {
