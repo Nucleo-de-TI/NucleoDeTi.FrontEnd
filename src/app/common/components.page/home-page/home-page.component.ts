@@ -11,12 +11,15 @@ import { RegularFlexBoxComponent } from '../../components.shared/regular-flex-bo
 import { RegularTextLinkComponent } from '../../components.shared/regular-text-link/regular-text-link.component';
 import { RegularVerticalPaddingComponent } from '../../components.shared/regular-vertical-padding/regular-vertical-padding.component';
 import { RegularHorizontalPaddingComponent } from '../../components.shared/regular-horizontal-padding/regular-horizontal-padding.component';
-import { BigSectionBoxComponent } from "../../components.shared/big-section-box/big-section-box.component";
-import { SmallSectionBoxComponent } from "../../components.shared/small-section-box/small-section-box.component";
-import { BorderTextLinkComponent } from "../../components.shared/border-text-link/border-text-link.component";
-import { ServicosDoNucleoComponent } from "./components.internal/servicos-do-nucleo/servicos-do-nucleo.component";
-import { ProjetosParaParceirosComponent } from "./components.internal/projetos-para-parceiros/projetos-para-parceiros.component";
-import { JornadaAcademicaComponent } from "./components.internal/jornada-academica/jornada-academica.component";
+import { BigSectionBoxComponent } from '../../components.shared/big-section-box/big-section-box.component';
+import { SmallSectionBoxComponent } from '../../components.shared/small-section-box/small-section-box.component';
+import { BorderTextLinkComponent } from '../../components.shared/border-text-link/border-text-link.component';
+import { ServicosDoNucleoComponent } from './components.internal/servicos-do-nucleo/servicos-do-nucleo.component';
+import { ProjetosParaParceirosComponent } from './components.internal/projetos-para-parceiros/projetos-para-parceiros.component';
+import { JornadaAcademicaComponent } from './components.internal/jornada-academica/jornada-academica.component';
+import { HomePageHeaderService } from '../../services.shared/homePageHeader/home-page-header.service';
+import { HomePageFooterService } from '../../services.shared/homePageFooter/home-page-footer.service';
+import { VestibularComponent } from "./components.internal/vestibular/vestibular.component";
 
 @Component({
     selector: 'app-home-page',
@@ -37,102 +40,11 @@ import { JornadaAcademicaComponent } from "./components.internal/jornada-academi
         BorderTextLinkComponent,
         ServicosDoNucleoComponent,
         ProjetosParaParceirosComponent,
-        JornadaAcademicaComponent
+        JornadaAcademicaComponent,
+        VestibularComponent
     ]
 })
 export class HomePageComponent {
-  private readonly uiThemeService = new UiThemeService();
-  readonly socialMedias: IIconLink[] = [
-    {
-      href: '#',
-      icon: 'bi bi-facebook',
-    },
-    {
-      href: '#',
-      icon: 'bi bi-instagram',
-    },
-    {
-      href: '#',
-      icon: 'bi bi-linkedin',
-    },
-    {
-      href: '#',
-      icon: 'bi bi-envelope-at',
-    },
-  ];
-  readonly regularHeaderModel: IRegularHeader = {
-    socialHub: {
-      title: 'CENTRAL DE ATENDIMENTO',
-      link: '#',
-      links: this.socialMedias,
-      buttons: [
-        {
-          icon: 'bi bi-megaphone',
-          callback: () => {},
-        },
-        {
-          icon: 'bi bi-brightness-high',
-          callback: () => {
-            this.uiThemeService.changeUiTheme();
-          },
-        },
-        {
-          icon: 'bi bi-ear',
-          callback: () => {},
-        },
-      ],
-    },
-    action: {
-      links: [
-        {
-          href: '#',
-          icon: 'bi bi-building',
-          innerText: 'Sobre',
-        },
-        {
-          href: '#',
-          icon: 'bi bi-book',
-          innerText: 'Cursos',
-        },
-        {
-          href: '#',
-          icon: 'bi bi-signpost-split',
-          innerText: 'Guia do Aluno',
-        },
-        {
-          href: '#',
-          icon: 'bi bi-calendar-event',
-          innerText: 'Eventos',
-        },
-        {
-          href: '#',
-          icon: 'bi bi-people-fill',
-          innerText: 'Parceiros',
-        },
-        {
-          href: '#',
-          icon: 'bi bi-bookmark-check',
-          innerText: 'Projetos',
-        },
-        {
-          href: '#',
-          icon: 'bi bi-file-earmark-person',
-          innerText: 'Currículo',
-        },
-      ],
-    },
-  };
-  readonly regularFooterModel: IRegularFooter = {
-    infos: [
-      {
-        title: 'Horário de Atendimento',
-        messages: ['Terça: 17h00 às 19h00', 'Quinta: 17h00 às 19h00'],
-      },
-      {
-        title: 'Local',
-        messages: ['Sala Núcleo de TI', 'Bloco F - Piso Térreo'],
-      },
-    ],
-    links: this.socialMedias,
-  };
+  public readonly homePageHeaderService = new HomePageHeaderService();
+  public readonly homePageFooterService = new HomePageFooterService();
 }
