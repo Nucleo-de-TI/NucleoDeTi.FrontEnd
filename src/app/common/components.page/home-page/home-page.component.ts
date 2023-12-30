@@ -5,19 +5,32 @@ import { UiThemeService } from '../../services.shared/uiTheme/ui-theme.service';
 import { RegularFooterComponent } from '../../components.layout/regular-footer/regular-footer.component';
 import { IIconLink } from '../../models.shadow/icon-link/icon-link';
 import { IRegularFooter } from '../../models.layout/regular-footer/regular-footer';
-import { RegularSectionBoxComponent } from "../../components.shared/regular-section-box/regular-section-box.component";
-import { RegularSectionBoxTitleComponent } from "../../components.shared/regular-section-box-title/regular-section-box-title.component";
-import { RegularFlexBoxComponent } from "../../components.shared/regular-flex-box/regular-flex-box.component";
-import { RegularTextLinkComponent } from "../../components.shared/regular-text-link/regular-text-link.component";
-import { RegularVerticalPaddingComponent } from "../../components.shared/regular-vertical-padding/regular-vertical-padding.component";
-import { RegularHorizontalPaddingComponent } from "../../components.shared/regular-horizontal-padding/regular-horizontal-padding.component";
+import { RegularSectionBoxComponent } from '../../components.shared/regular-section-box/regular-section-box.component';
+import { RegularSectionBoxTitleComponent } from '../../components.shared/regular-section-box-title/regular-section-box-title.component';
+import { RegularFlexBoxComponent } from '../../components.shared/regular-flex-box/regular-flex-box.component';
+import { RegularTextLinkComponent } from '../../components.shared/regular-text-link/regular-text-link.component';
+import { RegularVerticalPaddingComponent } from '../../components.shared/regular-vertical-padding/regular-vertical-padding.component';
+import { RegularHorizontalPaddingComponent } from '../../components.shared/regular-horizontal-padding/regular-horizontal-padding.component';
+import { BigSectionBoxComponent } from "../../components.shared/big-section-box/big-section-box.component";
+import { SmallSectionBoxComponent } from "../../components.shared/small-section-box/small-section-box.component";
 
 @Component({
     selector: 'app-home-page',
     standalone: true,
     templateUrl: './home-page.component.html',
     styleUrl: './home-page.component.scss',
-    imports: [RegularHeaderComponent, RegularFooterComponent, RegularSectionBoxComponent, RegularSectionBoxTitleComponent, RegularFlexBoxComponent, RegularTextLinkComponent, RegularVerticalPaddingComponent, RegularHorizontalPaddingComponent]
+    imports: [
+        RegularHeaderComponent,
+        RegularFooterComponent,
+        RegularSectionBoxComponent,
+        RegularSectionBoxTitleComponent,
+        RegularFlexBoxComponent,
+        RegularTextLinkComponent,
+        RegularVerticalPaddingComponent,
+        RegularHorizontalPaddingComponent,
+        BigSectionBoxComponent,
+        SmallSectionBoxComponent
+    ]
 })
 export class HomePageComponent {
   private readonly uiThemeService = new UiThemeService();
@@ -104,18 +117,12 @@ export class HomePageComponent {
   readonly regularFooterModel: IRegularFooter = {
     infos: [
       {
-        title: "Horário de Atendimento",
-        messages: [
-          "Terça: 17h00 às 19h00",
-          "Quinta: 17h00 às 19h00"
-        ]
+        title: 'Horário de Atendimento',
+        messages: ['Terça: 17h00 às 19h00', 'Quinta: 17h00 às 19h00'],
       },
       {
-        title: "Local",
-        messages: [
-          "Sala Núcleo de TI",
-          "Bloco F - Piso Térreo"
-        ]
+        title: 'Local',
+        messages: ['Sala Núcleo de TI', 'Bloco F - Piso Térreo'],
       },
     ],
     links: this.socialMedias,

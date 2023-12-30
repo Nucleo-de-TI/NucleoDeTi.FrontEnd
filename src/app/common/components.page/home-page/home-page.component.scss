@@ -20,17 +20,37 @@ div.father__servicos-do-nucleo__image {
 }
 
 div.father__projetos-para-parceiros {
-      background-color: var(--blue);
-      color: white;
+  background-color: var(--blue);
+  color: white;
 }
 
 div.father__projetos-para-parceiros__box {
-      text-align: center;
-      width: 100%;
-      border: var(--regular-border-size) solid var(--yellow);
-      border-radius: var(--regular-border-radius);
+  text-align: center;
+  width: 100%;
+  border: var(--regular-border-size) solid var(--yellow);
+  border-radius: var(--regular-border-radius);
+}
 
-      @media (min-width: 1300px) {
-            max-width: 520px;
-      }
+div.father__jornada-academica {
+  color: var(--primary-color);
+}
+
+a.father__jornada-academica__image {
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+
+  @media (min-width: 600px) {
+    &:last-of-type {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    &:last-of-type {
+      display: initial;
+    }
+  }
 }
