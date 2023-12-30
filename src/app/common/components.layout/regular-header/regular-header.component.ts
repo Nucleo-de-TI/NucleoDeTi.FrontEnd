@@ -11,28 +11,28 @@ import { CommonModule } from '@angular/common';
 import { IRegularHeader } from '../../models.layout/regular-header/regular-header';
 import { RegularTextLinkComponent } from '../../components.shared/regular-text-link/regular-text-link.component';
 import { RegularTextButtonComponent } from '../../components.shared/regular-text-button/regular-text-button.component';
-import { MediumTextLinkComponent } from "../../components.shared/medium-text-link/medium-text-link.component";
-import { MediumTextButtonComponent } from "../../components.shared/medium-text-button/medium-text-button.component";
+import { MediumTextLinkComponent } from '../../components.shared/medium-text-link/medium-text-link.component';
+import { MediumTextButtonComponent } from '../../components.shared/medium-text-button/medium-text-button.component';
 
 @Component({
-    selector: 'app-regular-header',
-    standalone: true,
-    templateUrl: './regular-header.component.html',
-    styleUrl: './regular-header.component.scss',
-    imports: [
-        CommonModule,
-        RegularSectionComponent,
-        SmallVerticalPaddingComponent,
-        RegularBrandLogoComponent,
-        RegularBrandIconComponent,
-        BigTextButtonComponent,
-        RegularListComponent,
-        AnimatedTextLinkComponent,
-        RegularTextLinkComponent,
-        RegularTextButtonComponent,
-        MediumTextLinkComponent,
-        MediumTextButtonComponent
-    ]
+  selector: 'app-regular-header',
+  standalone: true,
+  templateUrl: './regular-header.component.html',
+  styleUrl: './regular-header.component.scss',
+  imports: [
+    CommonModule,
+    RegularSectionComponent,
+    SmallVerticalPaddingComponent,
+    RegularBrandLogoComponent,
+    RegularBrandIconComponent,
+    BigTextButtonComponent,
+    RegularListComponent,
+    AnimatedTextLinkComponent,
+    RegularTextLinkComponent,
+    RegularTextButtonComponent,
+    MediumTextLinkComponent,
+    MediumTextButtonComponent,
+  ],
 })
 export class RegularHeaderComponent {
   @Input() model!: IRegularHeader;
