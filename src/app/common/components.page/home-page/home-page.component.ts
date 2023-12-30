@@ -13,6 +13,7 @@ import { RegularVerticalPaddingComponent } from '../../components.shared/regular
 import { RegularHorizontalPaddingComponent } from '../../components.shared/regular-horizontal-padding/regular-horizontal-padding.component';
 import { BigSectionBoxComponent } from "../../components.shared/big-section-box/big-section-box.component";
 import { SmallSectionBoxComponent } from "../../components.shared/small-section-box/small-section-box.component";
+import { BorderTextLinkComponent } from "../../components.shared/border-text-link/border-text-link.component";
 
 @Component({
     selector: 'app-home-page',
@@ -29,7 +30,8 @@ import { SmallSectionBoxComponent } from "../../components.shared/small-section-
         RegularVerticalPaddingComponent,
         RegularHorizontalPaddingComponent,
         BigSectionBoxComponent,
-        SmallSectionBoxComponent
+        SmallSectionBoxComponent,
+        BorderTextLinkComponent
     ]
 })
 export class HomePageComponent {
