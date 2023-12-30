@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RegularSectionComponent } from './regular-section.component';
+import { BigSectionBoxComponent } from './big-section-box.component';
 
-describe('RegularSectionComponent', () => {
-  let component: RegularSectionComponent;
-  let fixture: ComponentFixture<RegularSectionComponent>;
+describe('BigSectionBoxComponent', () => {
+  let component: BigSectionBoxComponent;
+  let fixture: ComponentFixture<BigSectionBoxComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RegularSectionComponent]
+      imports: [BigSectionBoxComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(RegularSectionComponent);
+    fixture = TestBed.createComponent(BigSectionBoxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

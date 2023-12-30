@@ -1,27 +1,23 @@
-export interface ILink {
-  href: string;
-  icon: string;
-  innerText?: string;
-  selected?: boolean
-}
-
-export interface IButton {
-  icon: string;
-  callback: () => void;
-}
+import { IIconButton } from "../../models.shadow/icon-button/icon-button";
+import { IIconLink } from "../../models.shadow/icon-link/icon-link";
 
 export interface ISocialHub {
   title: string;
   link: string;
-  links: ILink[];
-  buttons: IButton[];
+  links: IIconLink[];
+  buttons: IIconButton[];
+}
+
+export interface IActionLink extends IIconLink {
+  innerText: string;
+  selected?: boolean
 }
 
 export interface IAction {
-  links: ILink[];
+  links: IActionLink[];
 }
 
-export interface IDefaultHeader {
+export interface IRegularHeader {
   socialHub?: ISocialHub;
   action: IAction;
 }

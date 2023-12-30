@@ -1,5 +1,5 @@
 :root {
-  --blue-color: #161d43;
+  --blue: #161d43;
   --yellow: #fbed21;
   --black-translucent-effect: rgba(0, 0, 0, 0.315);
 
@@ -10,10 +10,14 @@
   --light-primary-color: #161d43;
   --light-secondary-color: #eaebfb;
   --light-tertiary-color: white;
+  --light-quarternary-color: white;
 
   --dark-primary-color: white;
   --dark-secondary-color: #1E1E1E;
   --dark-tertiary-color: #1E1E1E;
+
+  --regular-border-size: 2px;
+  --regular-border-radius: 8px;
 }
 
 * {

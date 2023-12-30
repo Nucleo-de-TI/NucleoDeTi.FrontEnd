@@ -10,8 +10,13 @@ div.father {
 }
 
 div.father__social-hub-tab {
+  display: none;
   background-color: var(--tertiary-color);
   color: var(--primary-color);
+
+  @media (min-width: 600px) {
+    display: block;
+  }
 }
 
 div.father__social-hub-tab__content {
@@ -41,7 +46,7 @@ div.father__social-hub-tab__content__button-list {
 }
 
 div.father__action-tab {
-  background-color: var(--blue-color);
+  background-color: var(--blue);
   color: white;
 }
 
@@ -90,7 +95,7 @@ div.father__slide-menu-list-tab {
 
   z-index: -1;
   width: 100%;
-  background-color: var(--blue-color);
+  background-color: var(--blue);
   transform: translateY(-100%);
   color: white;
   position: absolute;
@@ -100,7 +105,7 @@ div.father__slide-menu-list-tab {
   }
 }
 
-button.disable-slide-menu-list {
+button.father__disable-slide-menu-list {
   &.--on {
     filter: opacity(100%);
     pointer-events: all;
@@ -112,10 +117,20 @@ button.disable-slide-menu-list {
   background-color: var(--black-translucent-effect);
   filter: opacity(0%);
   pointer-events: none;
-  position: fixed;
+  position: absolute;
   top: 0px;
 
   @media (min-width: 1300px) {
     display: none;
+  }
+}
+
+span.adjust-header-height {
+  display: flex;
+  width: 100%;
+  height: 90px;
+
+  @media (min-width: 600px) {
+    height: 150px;
   }
 }

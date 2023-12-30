@@ -5,17 +5,15 @@ import { LocalStorageService } from '../localStorage/local-storage.service';
   providedIn: 'root',
 })
 export class UiThemeService {
-  private localStorageService = LocalStorageService;
-
   constructor() {
-    const savedTheme = this.localStorageService.getItem('theme');
+    const savedTheme = LocalStorageService.getItem('theme');
     const userTheme = this.detectTheme();
 
     if (!savedTheme) {
-      this.localStorageService.setItem('theme', userTheme);
+      LocalStorageService.setItem('theme', userTheme);
     }
 
-    this.setTheme();
+    this.setTheme()
   }
 
   private detectTheme() {
@@ -25,7 +23,7 @@ export class UiThemeService {
   }
 
   private setTheme() {
-    let currentTheme = this.localStorageService.getItem('theme');
+    let currentTheme = LocalStorageService.getItem('theme');
 
     const root = document.documentElement;
     const computedStyle = getComputedStyle(root);
@@ -52,9 +50,9 @@ export class UiThemeService {
   }
 
   changeUiTheme() {
-    let currentTheme = this.localStorageService.getItem('theme');
+    let currentTheme = LocalStorageService.getItem('theme');
 
-    this.localStorageService.setItem(
+    LocalStorageService.setItem(
       'theme',
       currentTheme === 'light' ? 'dark' : 'light'
     );
