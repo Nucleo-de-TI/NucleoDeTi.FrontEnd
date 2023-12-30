@@ -3,14 +3,12 @@ import { IRegularFlexBox } from '../../models.shared/regular-flex-box/regular-fl
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-regular-list',
+  selector: 'app-regular-flex-box',
   standalone: true,
-  imports: [
-    CommonModule
-  ],
-  templateUrl: './regular-list.component.html',
-  styleUrl: './regular-list.component.scss'
+  imports: [CommonModule],
+  templateUrl: './regular-flex-box.component.html',
+  styleUrl: './regular-flex-box.component.scss',
 })
-export class RegularListComponent {
+export class RegularFlexBoxComponent {
   @Input() model!: IRegularFlexBox;
 }

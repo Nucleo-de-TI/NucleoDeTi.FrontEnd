@@ -5,13 +5,19 @@ import { UiThemeService } from '../../services.shared/uiTheme/ui-theme.service';
 import { RegularFooterComponent } from '../../components.layout/regular-footer/regular-footer.component';
 import { IIconLink } from '../../models.shadow/icon-link/icon-link';
 import { IRegularFooter } from '../../models.layout/regular-footer/regular-footer';
+import { RegularSectionBoxComponent } from "../../components.shared/regular-section-box/regular-section-box.component";
+import { RegularSectionBoxTitleComponent } from "../../components.shared/regular-section-box-title/regular-section-box-title.component";
+import { RegularFlexBoxComponent } from "../../components.shared/regular-flex-box/regular-flex-box.component";
+import { RegularTextLinkComponent } from "../../components.shared/regular-text-link/regular-text-link.component";
+import { RegularVerticalPaddingComponent } from "../../components.shared/regular-vertical-padding/regular-vertical-padding.component";
+import { RegularHorizontalPaddingComponent } from "../../components.shared/regular-horizontal-padding/regular-horizontal-padding.component";
 
 @Component({
-  selector: 'app-home-page',
-  standalone: true,
-  templateUrl: './home-page.component.html',
-  styleUrl: './home-page.component.scss',
-  imports: [RegularHeaderComponent, RegularFooterComponent],
+    selector: 'app-home-page',
+    standalone: true,
+    templateUrl: './home-page.component.html',
+    styleUrl: './home-page.component.scss',
+    imports: [RegularHeaderComponent, RegularFooterComponent, RegularSectionBoxComponent, RegularSectionBoxTitleComponent, RegularFlexBoxComponent, RegularTextLinkComponent, RegularVerticalPaddingComponent, RegularHorizontalPaddingComponent]
 })
 export class HomePageComponent {
   private readonly uiThemeService = new UiThemeService();
@@ -108,7 +114,7 @@ export class HomePageComponent {
         title: "Local",
         messages: [
           "Sala Núcleo de TI",
-          "Block F - Piso Térreo"
+          "Bloco F - Piso Térreo"
         ]
       },
     ],

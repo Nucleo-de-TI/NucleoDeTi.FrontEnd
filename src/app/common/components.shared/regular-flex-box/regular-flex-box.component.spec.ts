@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RegularSectionComponent } from './regular-section.component';
+import { RegularFlexBoxComponent } from './regular-flex-box.component';
 
-describe('RegularSectionComponent', () => {
-  let component: RegularSectionComponent;
-  let fixture: ComponentFixture<RegularSectionComponent>;
+describe('RegularFlexBoxComponent', () => {
+  let component: RegularFlexBoxComponent;
+  let fixture: ComponentFixture<RegularFlexBoxComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RegularSectionComponent]
+      imports: [RegularFlexBoxComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(RegularSectionComponent);
+    fixture = TestBed.createComponent(RegularFlexBoxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

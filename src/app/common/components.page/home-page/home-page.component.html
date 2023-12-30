@@ -1,7 +1,121 @@
 <app-regular-header [model]="regularHeaderModel"></app-regular-header>
 <main>
-  <div class="fahter">
-    
+  <div class="father">
+    <app-regular-section-box>
+      <div class="father__servicos-do-nucleo">
+        <app-regular-flex-box
+          [model]="{
+            style: {
+              'flex-direction': 'row',
+              'justify-content': 'center',
+              'align-items': 'center',
+              gap: '100px'
+            }
+          }"
+        >
+          <div>
+            <app-regular-section-box-title>
+              Serviços do núcleo
+            </app-regular-section-box-title>
+            <app-regular-flex-box
+              [model]="{
+                style: {
+                  'flex-direction': 'column',
+                  'justify-content': 'start',
+                  'align-items': 'center',
+                  gap: '8px'
+                }
+              }"
+            >
+              <p>
+                No seu estágio inicial o núcleo já vem criando parcerias com os
+                demais cursos da universidade, sendo eles, Fisioterapia,
+                Odontologia, Fonoaudiologia, Terapia Ocupacional, Pedagogia,
+                entre outros, para o desenvolvimento de protótipos de
+                aplicativos e sites voltados aos Trabalhos de Conclusão de Curso
+                e Projetos Integradores, pois hoje é uma demanda da Universidade
+                em fazer a maor parte das entregas dos projetos em formato
+                Virtual.
+              </p>
+              <p>
+                O Núcleo fez uma parceria com a CISEP Sorocaba -SP, no site do
+                PAM (Programa de Auxilio Mutuo), que envolve 25 grandes empresas
+                de Sorocaba com o Corpo de Bombeiro.
+              </p>
+            </app-regular-flex-box>
+          </div>
+          <div class="father__servicos-do-nucleo__image">
+            <img
+              src="./assets/images/general/jrxatnqmrwim.png"
+              alt="Computer Image"
+            />
+          </div>
+        </app-regular-flex-box>
+      </div>
+    </app-regular-section-box>
+    <div class="father__projetos-para-parceiros">
+      <app-regular-section-box>
+        <app-regular-section-box-title>
+        Projetos para parceiros
+        </app-regular-section-box-title>
+        <app-regular-flex-box
+          [model]="{
+            style: {
+              'flex-wrap': 'wrap',
+              'flex-direction': 'row',
+              'justify-content': 'center',
+              'align-items': 'center',
+              gap: '28px'
+            }
+          }"
+        >
+          <div class="father__projetos-para-parceiros__box">
+            <app-regular-horizontal-padding>
+              <app-regular-vertical-padding>
+                <app-regular-flex-box
+                  [model]="{
+                    style: {
+                      'flex-direction': 'column',
+                      'justify-content': 'center',
+                      'align-items': 'center',
+                      gap: '42px'
+                    }
+                  }"
+                >
+                  <h3>Serviços do núcleo</h3>
+                  <p>Para cursos dentro da universidade</p>
+                  <app-regular-text-link [href]="'#'">
+                    Veja mais >
+                  </app-regular-text-link>
+                </app-regular-flex-box>
+              </app-regular-vertical-padding>
+            </app-regular-horizontal-padding>
+          </div>
+          <div class="father__projetos-para-parceiros__box">
+            <app-regular-horizontal-padding>
+              <app-regular-vertical-padding>
+                <app-regular-flex-box
+                  [model]="{
+                    style: {
+                      'flex-direction': 'column',
+                      'justify-content': 'center',
+                      'align-items': 'center',
+                      gap: '42px'
+                    }
+                  }"
+                >
+                  <h3>Serviços do núcleo</h3>
+                  <p>Para cursos dentro da universidade</p>
+                  <app-regular-text-link [href]="'#'">
+                    Veja mais >
+                  </app-regular-text-link>
+                </app-regular-flex-box>
+              </app-regular-vertical-padding>
+            </app-regular-horizontal-padding>
+          </div>
+        </app-regular-flex-box>
+      </app-regular-section-box>
+    </div>
   </div>
 </main>
 <app-regular-footer [model]="regularFooterModel"></app-regular-footer>

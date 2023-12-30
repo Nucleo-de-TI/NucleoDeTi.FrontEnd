@@ -1,13 +1,20 @@
 <header>
   <div class="father">
     <div *ngIf="model.socialHub !== undefined" class="father__social-hub-tab">
-      <app-regular-section>
+      <app-regular-horizontal-padding>
         <app-small-vertical-padding>
           <div class="father__social-hub-tab__content">
             <div
               class="father__social-hub-tab__content__list father__social-hub-tab__content__button-list"
             >
-              <app-regular-list [model]="socialHubList">
+              <app-regular-list
+                [model]="{
+                  style: {
+                    'flex-direction': 'row',
+                    gap: '28px'
+                  }
+                }"
+              >
                 <li *ngFor="let button of model.socialHub.buttons">
                   <app-medium-text-button (click)="button.callback()">
                     <i class="{{ button.icon }}"></i>
@@ -21,7 +28,9 @@
             <div
               class="father__social-hub-tab__content__list father__social-hub-tab__content__link-list"
             >
-              <app-regular-list [model]="socialHubList">
+              <app-regular-list
+                [model]="{ style: { 'flex-direction': 'row', gap: '42px' } }"
+              >
                 <li *ngFor="let link of model.socialHub.links">
                   <app-medium-text-link [href]="link.href">
                     <i class="{{ link.icon }}"></i>
@@ -31,10 +40,10 @@
             </div>
           </div>
         </app-small-vertical-padding>
-      </app-regular-section>
+      </app-regular-horizontal-padding>
     </div>
     <div class="father__action-tab">
-      <app-regular-section>
+      <app-regular-horizontal-padding>
         <app-small-vertical-padding>
           <div class="father__action-tab__content">
             <div class="father__action-tab__content__brand-icon">
@@ -49,7 +58,9 @@
               </app-big-text-button>
             </div>
             <div class="father__action-tab__content__link-list">
-              <app-regular-list [model]="actionListModel">
+              <app-regular-list
+                [model]="{ style: { 'flex-direction': 'row', gap: '42px' } }"
+              >
                 <li *ngFor="let link of model.action.links">
                   <app-animated-text-link [href]="link.href">
                     {{ link.innerText }}
@@ -59,15 +70,24 @@
             </div>
           </div>
         </app-small-vertical-padding>
-      </app-regular-section>
+      </app-regular-horizontal-padding>
     </div>
     <div
       class="global__default-animation-process father__slide-menu-list-tab"
       [ngClass]="slideMenuClassController"
     >
-      <app-regular-section>
+      <app-regular-horizontal-padding>
         <app-small-vertical-padding>
-          <app-regular-list [model]="slideMenuListModel">
+          <app-regular-list
+            [model]="{
+              style: {
+                'flex-direction': 'column',
+                'justify-content': 'center',
+                'align-items': 'start',
+                gap: '28px'
+              }
+            }"
+          >
             <li *ngFor="let link of model.action.links">
               <app-regular-text-link [href]="link.href" [target]="'_self'">
                 <i class="{{ link.icon }}"></i>
@@ -76,7 +96,7 @@
             </li>
           </app-regular-list>
         </app-small-vertical-padding>
-      </app-regular-section>
+      </app-regular-horizontal-padding>
     </div>
     <button
       class="global__default-animation-process father__disable-slide-menu-list"

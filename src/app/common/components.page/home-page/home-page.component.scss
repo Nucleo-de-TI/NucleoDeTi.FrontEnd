@@ -1,0 +1,36 @@
+div.father__servicos-do-nucleo {
+  color: var(--primary-color);
+}
+
+div.father__servicos-do-nucleo__image {
+  display: none;
+  min-width: 400px;
+
+  img {
+    width: 100%;
+  }
+
+  @media (min-width: 1100px) {
+    display: flex;
+  }
+
+  @media (min-width: 1300px) {
+    min-width: 420px;
+  }
+}
+
+div.father__projetos-para-parceiros {
+      background-color: var(--blue);
+      color: white;
+}
+
+div.father__projetos-para-parceiros__box {
+      text-align: center;
+      width: 100%;
+      border: var(--regular-border-size) solid var(--yellow);
+      border-radius: var(--regular-border-radius);
+
+      @media (min-width: 1300px) {
+            max-width: 520px;
+      }
+}
