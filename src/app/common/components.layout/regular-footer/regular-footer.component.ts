@@ -11,6 +11,8 @@ import { MediumTextLinkComponent } from '../../components.shared/medium-text-lin
 import { IRegularFlexBox } from '../../models.shared/regular-flex-box/regular-flex-box';
 import { CommonModule } from '@angular/common';
 import { RegularHorizontalPaddingComponent } from "../../components.shared/regular-horizontal-padding/regular-horizontal-padding.component";
+import { RegularSectionBoxComponent } from "../../components.shared/regular-section-box/regular-section-box.component";
+import { SmallSectionBoxComponent } from "../../components.shared/small-section-box/small-section-box.component";
 
 @Component({
     selector: 'app-regular-footer',
@@ -27,7 +29,9 @@ import { RegularHorizontalPaddingComponent } from "../../components.shared/regul
         RegularUnisoIconComponent,
         RegularListComponent,
         MediumTextLinkComponent,
-        RegularHorizontalPaddingComponent
+        RegularHorizontalPaddingComponent,
+        RegularSectionBoxComponent,
+        SmallSectionBoxComponent
     ]
 })
 export class RegularFooterComponent {

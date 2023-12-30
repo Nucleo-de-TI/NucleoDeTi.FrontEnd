@@ -1,15 +1,25 @@
 <div class="father">
-  <app-big-section-box>
+  <app-regular-section-box>
     <div class="father__vestibular">
       <app-regular-section-box-title>
         Vestibular 2024 - Universidade de Sorocaba
       </app-regular-section-box-title>
       <a href="#" target="_blank" class="father__vestibular__image">
-            <img src="./assets/images/general/yneocxlewqmg.png" alt="Vestibular Uniso">
+        <picture>
+          <source
+            srcset="./assets/images/general/yneocxlewqmg.png"
+            media="(min-width: 700px)"
+          />
+
+          <img
+            src="./assets/images/general/bjmlribxzeli.png"
+            alt="Vestibular Uniso"
+          />
+        </picture>
       </a>
       <app-border-text-link [href]="'#'" [model]="{ style: { color: 'blue' } }">
         Inscreva-se
       </app-border-text-link>
     </div>
-  </app-big-section-box>
+  </app-regular-section-box>
 </div>

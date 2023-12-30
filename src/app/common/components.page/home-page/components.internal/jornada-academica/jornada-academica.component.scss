@@ -3,16 +3,13 @@ div.father__jornada-academica {
 }
 
 a.father__jornada-academica__image {
-  width: 100%;
-
-  img {
-    width: 100%;
+  &:last-of-type {
+    display: none;
   }
 
-  @media (min-width: 600px) {
-    &:last-of-type {
-      display: none;
-    }
+  img {
+    border-radius: var(--regular-border-radius);
+    width: 100%;
   }
 
   @media (min-width: 1000px) {
