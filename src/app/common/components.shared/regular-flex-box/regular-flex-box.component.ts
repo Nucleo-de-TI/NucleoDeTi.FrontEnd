@@ -1,8 +1,6 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
 import {
-  IMedia,
-  IRegularFlexBox,
-  IStyle,
+  IRegularFlexBox, IRegularFlexBoxMedia,
 } from '../../models.shared/regular-flex-box/regular-flex-box';
 import { CommonModule } from '@angular/common';
 
@@ -39,7 +37,7 @@ export class RegularFlexBoxComponent {
     }
 
     const currentWidth = /Mobi|Android/i.test(navigator.userAgent) ? document.documentElement.clientWidth : window.innerWidth;
-    let pickedQuery: IMedia = JSON.parse(JSON.stringify(this.model.media[0]));
+    let pickedQuery: IRegularFlexBoxMedia = JSON.parse(JSON.stringify(this.model.media[0]));
 
     this.model.media!.forEach((query) => {
       if (query['min-width'] <= currentWidth) {

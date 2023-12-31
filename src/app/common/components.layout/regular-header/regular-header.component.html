@@ -11,6 +11,7 @@
                 [model]="{
                   style: {
                     'flex-direction': 'row',
+                    'list-style': 'none',
                     gap: '28px'
                   }
                 }"
@@ -29,7 +30,7 @@
               class="father__social-hub-tab__content__list father__social-hub-tab__content__link-list"
             >
               <app-regular-list
-                [model]="{ style: { 'flex-direction': 'row', gap: '28px' } }"
+                [model]="{ style: { 'flex-direction': 'row', 'list-style': 'none', gap: '28px' } }"
               >
                 <li *ngFor="let link of model.socialHub.links">
                   <app-medium-text-link [href]="link.href">
@@ -59,7 +60,7 @@
             </div>
             <div class="father__action-tab__content__link-list">
               <app-regular-list
-                [model]="{ style: { 'flex-direction': 'row', gap: '42px' } }"
+                [model]="{ style: { 'flex-direction': 'row', 'list-style': 'none', gap: '42px' } }"
               >
                 <li *ngFor="let link of model.action.links">
                   <app-animated-text-link [href]="link.href">
@@ -83,6 +84,7 @@
               style: {
                 'flex-direction': 'column',
                 'justify-content': 'center',
+                'list-style': 'none',
                 'align-items': 'start',
                 gap: '28px'
               }

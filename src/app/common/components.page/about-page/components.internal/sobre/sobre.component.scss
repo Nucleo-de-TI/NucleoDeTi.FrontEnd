@@ -1,0 +1,12 @@
+div.father__genti {
+  color: var(--primary-color);
+}
+
+div.father__genti__image {
+  display: none;
+  min-width: 320px;
+
+  @media (min-width: 1100px) {
+    display: flex;
+  }
+}

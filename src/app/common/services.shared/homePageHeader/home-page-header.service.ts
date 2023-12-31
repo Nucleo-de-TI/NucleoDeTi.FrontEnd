@@ -49,7 +49,7 @@ export class HomePageHeaderService {
     action: {
       links: [
         {
-          href: '#',
+          href: 'about',
           icon: 'bi bi-building',
           innerText: 'Sobre',
         },

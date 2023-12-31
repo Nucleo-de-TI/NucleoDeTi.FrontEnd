@@ -1,0 +1,80 @@
+<div class="father">
+  <app-regular-section-box>
+    <div class="father__objetivos-e-composicao">
+      <app-regular-flex-box
+        [model]="{
+          style: {
+            'flex-direction': 'column',
+            'justify-content': 'start',
+            'align-items': 'start',
+            gap: '100px'
+          },
+          media: [
+            {
+              'min-width': 1000,
+              style: {
+                'flex-direction': 'row',
+                'justify-content': 'start',
+                'align-items': 'start',
+                gap: '60px'
+              }
+            }
+          ]
+        }"
+      >
+        <div class="father__objetivos-e-composicao__box">
+          <app-regular-section-box-title>
+            Serviços do núcleo
+          </app-regular-section-box-title>
+          <app-regular-list
+            [model]="{
+              style: {
+                'flex-direction': 'column',
+                'justify-content': 'start',
+                'align-items': 'start',
+                gap: '8px'
+              }
+            }"
+          >
+            <li>Criar parcerias com Empresas de Sorocaba e Região</li>
+            <li>
+              Auxiliar a Universidade no desenvolvimento tecnológico sempre que
+              necessário;
+            </li>
+            <li>
+              Engajar os alunos como parte do desenvolvimento de uma integração
+              com a Universidade e Empresas;
+            </li>
+            <li>
+              Desenvolver eventos, treinamentos e disponibilizar para as
+              empresas alunos qualificados para o mercado de trabalho;
+            </li>
+            <li>
+              Criar e manter uma estrutura para os cursos como servidor e uma
+              página própria para uso dos projetos desenvolvidos pelo GENTI.
+            </li>
+          </app-regular-list>
+        </div>
+        <div class="father__objetivos-e-composicao__box">
+          <app-regular-section-box-title>
+            Composição do Grupo de Estudo Núcleo de TI
+          </app-regular-section-box-title>
+          <app-regular-list
+            [model]="{
+              style: {
+                'flex-direction': 'column',
+                'justify-content': 'start',
+                'align-items': 'start',
+                gap: '8px'
+              }
+            }"
+          >
+            <li>Análise e Desenvolvimento de Sistemas</li>
+            <li>Ciência de Dados e Inteligência Artificial</li>
+            <li>Engenharia da Computação</li>
+          </app-regular-list>
+        </div>
+      </app-regular-flex-box>
+    </div>
+  </app-regular-section-box>
+</div>
