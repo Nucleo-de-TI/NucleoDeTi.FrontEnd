@@ -8,6 +8,7 @@ import { HistoricoComponent } from './components.internal/historico/historico.co
 import { ObjetivosEComposicaoComponent } from './components.internal/objetivos-e-composicao/objetivos-e-composicao.component';
 import { DescritivoSobreLogoComponent } from './components.internal/descritivo-sobre-logo/descritivo-sobre-logo.component';
 import { GentiComponent } from "./components.internal/genti/genti.component";
+import { EnsinoExtensaoPesquisaComponent } from "./components.internal/ensino-extensao-pesquisa/ensino-extensao-pesquisa.component";
 
 @Component({
     selector: 'app-about-page',
@@ -21,7 +22,8 @@ import { GentiComponent } from "./components.internal/genti/genti.component";
         HistoricoComponent,
         ObjetivosEComposicaoComponent,
         DescritivoSobreLogoComponent,
-        GentiComponent
+        GentiComponent,
+        EnsinoExtensaoPesquisaComponent
     ]
 })
 export class AboutPageComponent {
