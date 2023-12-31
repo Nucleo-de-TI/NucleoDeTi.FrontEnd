@@ -13,7 +13,7 @@ export class UiThemeService {
       LocalStorageService.setItem('theme', userTheme);
     }
 
-    this.setTheme()
+    this.setTheme();
   }
 
   private detectTheme() {
@@ -28,25 +28,19 @@ export class UiThemeService {
     const root = document.documentElement;
     const computedStyle = getComputedStyle(root);
 
-    const primaryColor = computedStyle.getPropertyValue(
-      `--${currentTheme}-primary-color`
-    );
-    const secondaryColor = computedStyle.getPropertyValue(
-      `--${currentTheme}-secondary-color`
-    );
-    const tertiaryColor = computedStyle.getPropertyValue(
-      `--${currentTheme}-tertiary-color`
-    );
+    const colors = [
+      'primary-color',
+      'secondary-color',
+      'tertiary-color',
+      'quaternary-color',
+    ] as const;
 
-    document.documentElement.style.setProperty(
-      '--primary-color',
-      primaryColor
-    );
-    document.documentElement.style.setProperty(
-      '--secondary-color',
-      secondaryColor
-    );
-    document.documentElement.style.setProperty('--tertiary-color', tertiaryColor);
+    colors.forEach((color) => {
+      document.documentElement.style.setProperty(
+        `--${color}`,
+        computedStyle.getPropertyValue(`--${currentTheme}-${color}`)
+      );
+    });
   }
 
   changeUiTheme() {

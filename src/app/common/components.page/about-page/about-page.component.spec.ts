@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BigSectionBoxComponent } from './big-section-box.component';
+import { AboutPageComponent } from './about-page.component';
 
-describe('BigSectionBoxComponent', () => {
-  let component: BigSectionBoxComponent;
-  let fixture: ComponentFixture<BigSectionBoxComponent>;
+describe('AboutPageComponent', () => {
+  let component: AboutPageComponent;
+  let fixture: ComponentFixture<AboutPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BigSectionBoxComponent]
+      imports: [AboutPageComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(BigSectionBoxComponent);
+    fixture = TestBed.createComponent(AboutPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

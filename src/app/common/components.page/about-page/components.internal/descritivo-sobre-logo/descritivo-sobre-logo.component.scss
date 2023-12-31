@@ -1,0 +1,20 @@
+div.father__descritivo-sobre-logo {
+  color: var(--primary-color);
+}
+
+div.father__descritivo-sobre-logo__image {
+  display: none;
+  min-width: 500px;
+
+  @media (min-width: 1100px) {
+    display: flex;
+  }
+}
+
+div.father__descritivo-sobre-logo__content__image {
+      width: 100%;
+
+  @media (min-width: 1100px) {
+      display: none;
+  }
+}

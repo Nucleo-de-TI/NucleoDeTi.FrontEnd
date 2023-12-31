@@ -1,4 +1,4 @@
-export interface IStyle {
+export interface IRegularFlexBoxStyle {
   'flex-wrap'?: string;
   'flex-direction'?: string;
   'align-items'?: string;
@@ -6,12 +6,12 @@ export interface IStyle {
   gap?: '8px' | '28px' | '42px' | '60px' | '100px';
 }
 
-export interface IMedia {
+export interface IRegularFlexBoxMedia {
   'min-width': number;
-  style: IStyle;
+  style: IRegularFlexBoxStyle;
 }
 
 export interface IRegularFlexBox {
-  media?: IMedia[];
-  style: IStyle;
+  media?: IRegularFlexBoxMedia [];
+  style: IRegularFlexBoxStyle;
 }

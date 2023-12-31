@@ -32,7 +32,7 @@ div.father__social-hub-tab__content__list {
   position: absolute;
   top: 50%;
 
-  @media (min-width: 1000px) {
+  @media (min-width: 1300px) {
     display: flex;
   }
 }
@@ -98,6 +98,7 @@ div.father__slide-menu-list-tab {
   background-color: var(--blue);
   transform: translateY(-100%);
   color: white;
+  transition: var(--regular-animation-process);
   position: absolute;
 
   @media (min-width: 1300px) {
@@ -115,6 +116,7 @@ button.father__disable-slide-menu-list {
   width: 100vw;
   height: 100vh;
   background-color: var(--black-translucent-effect);
+  transition: var(--regular-animation-process);
   filter: opacity(0%);
   pointer-events: none;
   position: absolute;

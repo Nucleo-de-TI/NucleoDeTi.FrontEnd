@@ -4,20 +4,24 @@
   --black-translucent-effect: rgba(0, 0, 0, 0.315);
 
   --primary-color: #161d43;
-  --secondary-color: #eaebfb;
+  --secondary-color: #f7f8ff;
   --tertiary-color: white;
+  --quaternary-color: #e3e5ff;
 
   --light-primary-color: #161d43;
-  --light-secondary-color: #eaebfb;
+  --light-secondary-color: #f7f8ff;
   --light-tertiary-color: white;
   --light-quarternary-color: white;
+  --light-quaternary-color: #e3e5ff;
 
   --dark-primary-color: white;
-  --dark-secondary-color: #1E1E1E;
-  --dark-tertiary-color: #1E1E1E;
+  --dark-secondary-color: #1e1e1e;
+  --dark-tertiary-color: #1e1e1e;
+  --dark-quaternary-color: #303030;
 
   --regular-border-size: 2px;
   --regular-border-radius: 8px;
+  --regular-animation-process: ease-in-out 0.35s;
 }
 
 * {
@@ -82,12 +86,11 @@ img {
   -webkit-user-select: none;
   -ms-user-select: none;
   pointer-events: none;
+  border-radius: 8px;
 }
 
 a,
-button,
-ul,
-li {
+button {
   all: unset;
 }
 
@@ -95,8 +98,4 @@ a,
 button {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-}
-
-.global__default-animation-process {
-  transition: ease-in-out 0.35s;
 }

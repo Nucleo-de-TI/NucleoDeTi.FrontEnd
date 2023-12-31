@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import { BigSectionBoxComponent } from "../../../../components.shared/big-section-box/big-section-box.component";
 import { RegularFlexBoxComponent } from "../../../../components.shared/regular-flex-box/regular-flex-box.component";
 import { RegularSectionBoxTitleComponent } from "../../../../components.shared/regular-section-box-title/regular-section-box-title.component";
+import { RegularSectionBoxComponent } from "../../../../components.shared/regular-section-box/regular-section-box.component";
+import { RegularListComponent } from "../../../../components.shared/regular-list/regular-list.component";
 
 @Component({
     selector: 'app-servicos-do-nucleo',
     standalone: true,
     templateUrl: './servicos-do-nucleo.component.html',
     styleUrl: './servicos-do-nucleo.component.scss',
-    imports: [BigSectionBoxComponent, RegularFlexBoxComponent, RegularSectionBoxTitleComponent]
+    imports: [RegularFlexBoxComponent, RegularSectionBoxTitleComponent, RegularSectionBoxComponent, RegularListComponent]
 })
 export class ServicosDoNucleoComponent {
 

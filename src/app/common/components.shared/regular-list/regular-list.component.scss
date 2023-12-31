@@ -1,3 +1,7 @@
 ul {
+  &.--padding-left {
+    padding-left: 18px;
+  }
+
   display: flex;
 }
