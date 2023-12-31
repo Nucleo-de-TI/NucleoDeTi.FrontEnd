@@ -15,6 +15,7 @@ import { JornadaAcademicaComponent } from './components.internal/jornada-academi
 import { HomePageHeaderService } from '../../services.shared/homePageHeader/home-page-header.service';
 import { HomePageFooterService } from '../../services.shared/homePageFooter/home-page-footer.service';
 import { VestibularComponent } from "./components.internal/vestibular/vestibular.component";
+import { WelcomeImageComponent } from "./components.internal/welcome-image/welcome-image.component";
 
 @Component({
     selector: 'app-home-page',
@@ -35,7 +36,8 @@ import { VestibularComponent } from "./components.internal/vestibular/vestibular
         ServicosDoNucleoComponent,
         ProjetosParaParceirosComponent,
         JornadaAcademicaComponent,
-        VestibularComponent
+        VestibularComponent,
+        WelcomeImageComponent
     ]
 })
 export class HomePageComponent {
