@@ -5,12 +5,12 @@ import { RegularSectionBoxTitleComponent } from "../../../../components.shared/r
 import { RegularBrandIconComponent } from "../../../../components.shared/regular-brand-icon/regular-brand-icon.component";
 
 @Component({
-    selector: 'app-sobre',
+    selector: 'app-genti',
     standalone: true,
-    templateUrl: './sobre.component.html',
-    styleUrl: './sobre.component.scss',
+    templateUrl: './genti.component.html',
+    styleUrl: './genti.component.scss',
     imports: [RegularSectionBoxComponent, RegularFlexBoxComponent, RegularSectionBoxTitleComponent, RegularBrandIconComponent]
 })
-export class SobreComponent {
+export class GentiComponent {
 
 }
