@@ -1,5 +1,5 @@
 <app-regular-text-link [href]="href" [target]="target">
-  <span>
+  <span [ngClass]="{ '--selected': model?.selected ? true : false }">
     <ng-content></ng-content>
   </span>
 </app-regular-text-link>

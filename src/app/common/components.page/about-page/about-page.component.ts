@@ -31,4 +31,8 @@ import { FormacaoDaComissaoComponent } from './components.internal/formacao-da-c
 export class AboutPageComponent {
   public readonly homePageHeaderService = new HomePageHeaderService();
   public readonly homePageFooterService = new HomePageFooterService();
+
+  constructor() {
+    this.homePageHeaderService.model.action.links[0].selected = true;
+  }
 }
