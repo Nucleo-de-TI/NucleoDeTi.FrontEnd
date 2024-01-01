@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { HomePageHeaderService } from '../../services.shared/homePageHeader/home-page-header.service';
-import { HomePageFooterService } from '../../services.shared/homePageFooter/home-page-footer.service';
+import { HomePageHeaderService } from '../../services/homePageHeader/home-page-header.service';
+import { HomePageFooterService } from '../../services/homePageFooter/home-page-footer.service';
 import { RegularHeaderComponent } from '../../components.layout/regular-header/regular-header.component';
 import { RegularFooterComponent } from '../../components.layout/regular-footer/regular-footer.component';
 import { GrupoDeEstudoComponent } from './components.internal/grupo-de-estudo/grupo-de-estudo.component';
