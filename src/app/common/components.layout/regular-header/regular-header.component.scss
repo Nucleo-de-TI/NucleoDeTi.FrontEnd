@@ -1,4 +1,15 @@
+span.adjust-to-header-height {
+  display: flex;
+  width: 100%;
+  height: 90px;
+
+  @media (min-width: 1000px) {
+    height: 150px;
+  }
+}
+
 header {
+  z-index: 4;
   width: 100%;
   position: fixed;
   top: 0px;
@@ -6,6 +17,7 @@ header {
 }
 
 div.father {
+  transition: var(--regular-animation-process);
   position: relative;
 }
 
@@ -14,7 +26,7 @@ div.father__social-hub-tab {
   background-color: var(--tertiary-color);
   color: var(--primary-color);
 
-  @media (min-width: 600px) {
+  @media (min-width: 1300px) {
     display: block;
   }
 }
@@ -27,14 +39,9 @@ div.father__social-hub-tab__content {
 }
 
 div.father__social-hub-tab__content__list {
-  display: none;
   transform: translateY(-50%);
   position: absolute;
   top: 50%;
-
-  @media (min-width: 1300px) {
-    display: flex;
-  }
 }
 
 div.father__social-hub-tab__content__link-list {
@@ -106,33 +113,23 @@ div.father__slide-menu-list-tab {
   }
 }
 
-button.father__disable-slide-menu-list {
+button.disable-slide-menu-list-tab {
   &.--on {
     filter: opacity(100%);
     pointer-events: all;
   }
 
-  z-index: -2;
+  z-index: 3;
   width: 100vw;
   height: 100vh;
   background-color: var(--black-translucent-effect);
   transition: var(--regular-animation-process);
   filter: opacity(0%);
   pointer-events: none;
-  position: absolute;
+  position: fixed;
   top: 0px;
 
   @media (min-width: 1300px) {
     display: none;
-  }
-}
-
-span.adjust-header-height {
-  display: flex;
-  width: 100%;
-  height: 90px;
-
-  @media (min-width: 600px) {
-    height: 150px;
   }
 }

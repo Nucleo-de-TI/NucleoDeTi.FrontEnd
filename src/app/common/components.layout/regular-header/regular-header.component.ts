@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { SmallVerticalPaddingComponent } from '../../components.shared/small-vertical-padding/small-vertical-padding.component';
 import { RegularBrandLogoComponent } from '../../components.shared/regular-brand-logo/regular-brand-logo.component';
 import { RegularBrandIconComponent } from '../../components.shared/regular-brand-icon/regular-brand-icon.component';
@@ -36,7 +36,6 @@ import { RegularHorizontalPaddingComponent } from '../../components.shared/regul
 })
 export class RegularHeaderComponent {
   @Input() model!: IRegularHeader;
-
   private _slideMenuClassController = {
     '--on': false,
   };

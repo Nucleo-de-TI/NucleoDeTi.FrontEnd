@@ -1,3 +1,4 @@
+<span class="adjust-to-header-height"></span>
 <header>
   <div class="father">
     <div *ngIf="model.socialHub !== undefined" class="father__social-hub-tab">
@@ -30,7 +31,13 @@
               class="father__social-hub-tab__content__list father__social-hub-tab__content__link-list"
             >
               <app-regular-list
-                [model]="{ style: { 'flex-direction': 'row', 'list-style': 'none', gap: '28px' } }"
+                [model]="{
+                  style: {
+                    'flex-direction': 'row',
+                    'list-style': 'none',
+                    gap: '28px'
+                  }
+                }"
               >
                 <li *ngFor="let link of model.socialHub.links">
                   <app-medium-text-link [href]="link.href">
@@ -60,10 +67,19 @@
             </div>
             <div class="father__action-tab__content__link-list">
               <app-regular-list
-                [model]="{ style: { 'flex-direction': 'row', 'list-style': 'none', gap: '42px' } }"
+                [model]="{
+                  style: {
+                    'flex-direction': 'row',
+                    'list-style': 'none',
+                    gap: '42px'
+                  }
+                }"
               >
                 <li *ngFor="let link of model.action.links">
-                  <app-animated-text-link [href]="link.href">
+                  <app-animated-text-link
+                    [href]="link.href"
+                    [model]="{ selected: link.selected ? true : false }"
+                  >
                     {{ link.innerText }}
                   </app-animated-text-link>
                 </li>
@@ -91,7 +107,7 @@
             }"
           >
             <li *ngFor="let link of model.action.links">
-              <app-regular-text-link [href]="link.href" [target]="'_self'">
+              <app-regular-text-link [href]="link.href">
                 <i class="{{ link.icon }}"></i>
                 {{ link.innerText }}
               </app-regular-text-link>
@@ -100,11 +116,10 @@
         </app-small-vertical-padding>
       </app-regular-horizontal-padding>
     </div>
-    <button
-      class="father__disable-slide-menu-list"
-      [ngClass]="slideMenuClassController"
-      (click)="onSlideMenuButtonClick()"
-    ></button>
   </div>
 </header>
-<span class="adjust-header-height"></span>
+<button
+  class="disable-slide-menu-list-tab"
+  [ngClass]="slideMenuClassController"
+  (click)="onSlideMenuButtonClick()"
+></button>

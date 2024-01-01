@@ -1,4 +1,5 @@
 span {
+  &.--selected::after,
   &:hover::after {
     width: 100%;
   }

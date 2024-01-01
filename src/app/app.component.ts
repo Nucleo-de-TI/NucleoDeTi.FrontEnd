@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { UiThemeService } from './common/services.shared/uiTheme/ui-theme.service';
+import { UiThemeService } from './common/services/uiTheme/ui-theme.service';
 
 @Component({
   selector: 'app-root',

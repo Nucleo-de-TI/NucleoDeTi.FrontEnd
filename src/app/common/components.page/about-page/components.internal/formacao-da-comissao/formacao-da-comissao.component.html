@@ -1,0 +1,55 @@
+<div class="father">
+  <app-regular-section-box>
+    <div class="father__formacao-da-comissao">
+      <app-regular-flex-box
+        [model]="{
+          style: {
+            'flex-direction': 'row',
+            'justify-content': 'center',
+            'align-items': 'center',
+            gap: '42px'
+          }
+        }"
+      >
+        <div class="father__formacao-da-comissao__content">
+          <app-regular-section-box-title>
+            Formação da Comissão do GENTI
+          </app-regular-section-box-title>
+          <app-regular-flex-box
+            [model]="{
+              style: {
+                'flex-direction': 'column',
+                'justify-content': 'start',
+                'align-items': 'center',
+                gap: '42px'
+              }
+            }"
+          >
+            <div class="father__formacao-da-comissao__content__image">
+              <app-regular-brand-logo
+                [src]="'./assets/images/general/oqvyeppfrxbm.png'"
+              ></app-regular-brand-logo>
+            </div>
+            <p>
+              O propósito do Núcleo é consolidar uma união entre os alunos por
+              meio de uma comissão encarregada de representar as necessidades de
+              seus colegas de curso na seleção de eventos como palestras,
+              visitas técnicas, minicursos e outros. Essa iniciativa visa não
+              apenas expandir o conhecimento dos alunos dos cursos de
+              Tecnologia, mas também criar oportunidades de estabelecer contatos
+              e vínculos com empresas. Dessa forma, o Núcleo amplia as
+              possibilidades de estágios e contratações para os estudantes,
+              contribuindo para o enriquecimento da experiência acadêmica e
+              profissional.
+            </p>
+          </app-regular-flex-box>
+        </div>
+        <div class="father__formacao-da-comissao__image">
+          <app-regular-brand-logo
+            [src]="'./assets/images/general/icnnfoardjls.png'"
+          ></app-regular-brand-logo>
+        </div>
+      </app-regular-flex-box>
+    </div>
+  </app-regular-section-box>
+</div>

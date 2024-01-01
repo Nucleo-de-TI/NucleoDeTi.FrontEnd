@@ -12,8 +12,8 @@ import { BorderTextLinkComponent } from '../../components.shared/border-text-lin
 import { ServicosDoNucleoComponent } from './components.internal/servicos-do-nucleo/servicos-do-nucleo.component';
 import { ProjetosParaParceirosComponent } from './components.internal/projetos-para-parceiros/projetos-para-parceiros.component';
 import { JornadaAcademicaComponent } from './components.internal/jornada-academica/jornada-academica.component';
-import { HomePageHeaderService } from '../../services.shared/homePageHeader/home-page-header.service';
-import { HomePageFooterService } from '../../services.shared/homePageFooter/home-page-footer.service';
+import { HomePageHeaderService } from '../../services/homePageHeader/home-page-header.service';
+import { HomePageFooterService } from '../../services/homePageFooter/home-page-footer.service';
 import { VestibularComponent } from "./components.internal/vestibular/vestibular.component";
 import { WelcomeImageComponent } from "./components.internal/welcome-image/welcome-image.component";
 
