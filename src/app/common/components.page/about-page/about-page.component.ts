@@ -9,6 +9,7 @@ import { ObjetivosEComposicaoComponent } from './components.internal/objetivos-e
 import { DescritivoSobreLogoComponent } from './components.internal/descritivo-sobre-logo/descritivo-sobre-logo.component';
 import { GentiComponent } from "./components.internal/genti/genti.component";
 import { EnsinoExtensaoPesquisaComponent } from "./components.internal/ensino-extensao-pesquisa/ensino-extensao-pesquisa.component";
+import { FormacaoDaComissaoComponent } from "./components.internal/formacao-da-comissao/formacao-da-comissao.component";
 
 @Component({
     selector: 'app-about-page',
@@ -23,7 +24,8 @@ import { EnsinoExtensaoPesquisaComponent } from "./components.internal/ensino-ex
         ObjetivosEComposicaoComponent,
         DescritivoSobreLogoComponent,
         GentiComponent,
-        EnsinoExtensaoPesquisaComponent
+        EnsinoExtensaoPesquisaComponent,
+        FormacaoDaComissaoComponent
     ]
 })
 export class AboutPageComponent {
