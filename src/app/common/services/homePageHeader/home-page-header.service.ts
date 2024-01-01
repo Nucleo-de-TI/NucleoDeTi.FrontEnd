@@ -9,8 +9,10 @@ export class HomePageHeaderService {
   private readonly uiThemeService = new UiThemeService();
   public readonly model: IRegularHeader = {
     socialHub: {
-      title: 'CENTRAL DE ATENDIMENTO',
-      link: '#',
+      title: {
+        innerText: 'CENTRAL DE ATENDIMENTO',
+        href: "#"
+      },
       links: [
         {
           href: '#',
