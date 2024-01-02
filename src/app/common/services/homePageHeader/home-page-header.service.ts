@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IRegularHeader } from '../../models.layout/regular-header/regular-header';
+import { IRegularHeader } from '../../models/regular-header/regular-header';
 import { UiThemeService } from '../uiTheme/ui-theme.service';
 
 @Injectable({

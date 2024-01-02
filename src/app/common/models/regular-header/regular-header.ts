@@ -1,6 +1,6 @@
-import { IIconButton } from "../../models.shadow/icon-button/icon-button";
-import { IIconLink } from "../../models.shadow/icon-link/icon-link";
-import { ILink } from "../../models.shadow/link/link";
+import { IIconButton } from "../../models/icon-button/icon-button";
+import { IIconLink } from "../../models/icon-link/icon-link";
+import { ILink } from "../../models/link/link";
 
 export interface ISocialHub {
   title: ILink;

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IRegularFooter } from '../../models.layout/regular-footer/regular-footer';
+import { IRegularFooter } from '../../models/regular-footer/regular-footer';
 
 @Injectable({
   providedIn: 'root',

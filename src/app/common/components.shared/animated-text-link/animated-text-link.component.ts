@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { RegularTextLinkComponent } from '../regular-text-link/regular-text-link.component';
-import { IAnimatedLink } from '../../models.shared/animated-link/animated-link';
+import { IAnimatedLink } from '../../models/animated-link/animated-link';
 import { CommonModule } from '@angular/common';
 
 @Component({

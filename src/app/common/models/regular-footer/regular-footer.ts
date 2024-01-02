@@ -1,4 +1,4 @@
-import { IIconLink } from '../../models.shadow/icon-link/icon-link';
+import { IIconLink } from '../../models/icon-link/icon-link';
 
 export interface IInfo {
   title: string;

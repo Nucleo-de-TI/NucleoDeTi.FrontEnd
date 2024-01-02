@@ -1,6 +1,6 @@
 import { Directive, HostListener, Input, OnInit } from '@angular/core';
 import {
-  IRegularFlexBox, IRegularFlexBoxMedia } from '../../models.shared/regular-flex-box/regular-flex-box';
+  IRegularFlexBox, IRegularFlexBoxMedia } from '../../models/regular-flex-box/regular-flex-box';
 
 @Directive({
   selector: '[appRegularFlexBox]',

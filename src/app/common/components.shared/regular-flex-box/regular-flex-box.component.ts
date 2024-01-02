@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import {
   IRegularFlexBox,
-} from '../../models.shared/regular-flex-box/regular-flex-box';
+} from '../../models/regular-flex-box/regular-flex-box';
 import { CommonModule } from '@angular/common';
 import { RegularFlexBoxDirective } from '../../directives/regular-flex-box/regular-flex-box.directive';
 

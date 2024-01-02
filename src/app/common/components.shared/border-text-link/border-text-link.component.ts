@@ -3,7 +3,7 @@ import { RegularTextLinkComponent } from '../regular-text-link/regular-text-link
 import { SmallVerticalPaddingComponent } from '../small-vertical-padding/small-vertical-padding.component';
 import { RegularHorizontalPaddingComponent } from '../regular-horizontal-padding/regular-horizontal-padding.component';
 import { RegularTextComponent } from '../regular-text/regular-text.component';
-import { IBorderTextButton } from '../../models.shared/border-text-button/border-text-button';
+import { IBorderTextButton } from '../../models/border-text-button/border-text-button';
 import { CommonModule } from '@angular/common';
 
 @Component({

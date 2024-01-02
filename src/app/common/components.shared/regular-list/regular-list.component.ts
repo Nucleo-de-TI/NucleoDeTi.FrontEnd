@@ -1,7 +1,7 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
-import { IRegularFlexBoxMedia } from '../../models.shared/regular-flex-box/regular-flex-box';
+import { IRegularFlexBoxMedia } from '../../models/regular-flex-box/regular-flex-box';
 import { CommonModule } from '@angular/common';
-import { IRegularList } from '../../models.shared/regular-list/regular-list';
+import { IRegularList } from '../../models/regular-list/regular-list';
 import { RegularFlexBoxDirective } from '../../directives/regular-flex-box/regular-flex-box.directive';
 
 @Component({
