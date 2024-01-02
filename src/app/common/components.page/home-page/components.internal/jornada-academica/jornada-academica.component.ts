@@ -3,13 +3,14 @@ import { RegularSectionBoxTitleComponent } from "../../../../components.shared/r
 import { RegularFlexBoxComponent } from "../../../../components.shared/regular-flex-box/regular-flex-box.component";
 import { BorderTextLinkComponent } from "../../../../components.shared/border-text-link/border-text-link.component";
 import { RegularSectionBoxComponent } from "../../../../components.shared/regular-section-box/regular-section-box.component";
+import { AnimatedSectionBoxComponent } from "../../../../components.shared/animated-section-box/animated-section-box.component";
 
 @Component({
     selector: 'app-jornada-academica',
     standalone: true,
     templateUrl: './jornada-academica.component.html',
     styleUrl: './jornada-academica.component.scss',
-    imports: [RegularSectionBoxTitleComponent, RegularFlexBoxComponent, BorderTextLinkComponent, RegularSectionBoxComponent]
+    imports: [RegularSectionBoxTitleComponent, RegularFlexBoxComponent, BorderTextLinkComponent, RegularSectionBoxComponent, AnimatedSectionBoxComponent]
 })
 export class JornadaAcademicaComponent {
 
