@@ -1,0 +1,14 @@
+div.father {
+      color: var(--primary-color);
+}
+
+div.father__estrutura__content__boxes, 
+div.father__estrutura__content__boxes__boxes {
+      width: 100%;
+}
+
+div.father__estrutura__content__boxes__boxes__box {
+      width: 100%;
+      border-radius: var(--regular-border-radius);
+      border: var(--regular-border-size) solid var(--primary-color);
+}
