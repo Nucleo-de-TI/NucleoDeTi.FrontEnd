@@ -11,6 +11,7 @@ import { GentiComponent } from './components.internal/genti/genti.component';
 import { EnsinoExtensaoPesquisaComponent } from './components.internal/ensino-extensao-pesquisa/ensino-extensao-pesquisa.component';
 import { FormacaoDaComissaoComponent } from './components.internal/formacao-da-comissao/formacao-da-comissao.component';
 import { EstruturaComponent } from "./components.internal/estrutura/estrutura.component";
+import { EquipesDaComposicaoComponent } from "./components.internal/equipes-da-composicao/equipes-da-composicao.component";
 
 @Component({
     selector: 'app-about-page',
@@ -27,7 +28,8 @@ import { EstruturaComponent } from "./components.internal/estrutura/estrutura.co
         GentiComponent,
         EnsinoExtensaoPesquisaComponent,
         FormacaoDaComissaoComponent,
-        EstruturaComponent
+        EstruturaComponent,
+        EquipesDaComposicaoComponent
     ]
 })
 export class AboutPageComponent {
