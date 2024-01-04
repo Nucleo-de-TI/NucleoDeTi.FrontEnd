@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RegularTextComponent } from "../regular-text/regular-text.component";
+import { IRegularText } from '../../models/regular-text/regular-text';
 
 @Component({
     selector: 'app-medium-text',
@@ -9,5 +10,5 @@ import { RegularTextComponent } from "../regular-text/regular-text.component";
     imports: [RegularTextComponent]
 })
 export class MediumTextComponent {
-
+  @Input() model?: IRegularText;
 }
