@@ -30,7 +30,6 @@ export class BorderTextLinkComponent implements OnInit {
 
   ngOnInit(): void {
     this._linkClassController[`--${this.model.style.color}`] = true;
-    console.log(this._linkClassController);
   }
 
   get linkClassController() {

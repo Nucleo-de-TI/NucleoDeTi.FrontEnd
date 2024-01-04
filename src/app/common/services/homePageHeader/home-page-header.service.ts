@@ -1,53 +1,11 @@
 import { Injectable } from '@angular/core';
 import { IRegularHeader } from '../../models/regular-header/regular-header';
-import { UiThemeService } from '../uiTheme/ui-theme.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class HomePageHeaderService {
-  private readonly uiThemeService = new UiThemeService();
   public readonly model: IRegularHeader = {
-    socialHub: {
-      title: {
-        innerText: 'CENTRAL DE ATENDIMENTO',
-        href: "#"
-      },
-      links: [
-        {
-          href: '#',
-          icon: 'bi bi-facebook',
-        },
-        {
-          href: '#',
-          icon: 'bi bi-instagram',
-        },
-        {
-          href: '#',
-          icon: 'bi bi-linkedin',
-        },
-        {
-          href: '#',
-          icon: 'bi bi-envelope-at',
-        },
-      ],
-      buttons: [
-        {
-          icon: 'bi bi-megaphone',
-          callback: () => {},
-        },
-        {
-          icon: 'bi bi-brightness-high',
-          callback: () => {
-            this.uiThemeService.changeUiTheme();
-          },
-        },
-        {
-          icon: 'bi bi-ear',
-          callback: () => {},
-        },
-      ],
-    },
     action: {
       links: [
         {
