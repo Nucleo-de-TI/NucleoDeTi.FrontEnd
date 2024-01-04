@@ -41,7 +41,7 @@ export class HomePageHeaderService {
         {
           href: '#',
           icon: 'bi bi-file-earmark-person',
-          innerText: 'Currículo',
+          innerText: 'Currículos',
         },
       ],
     },
