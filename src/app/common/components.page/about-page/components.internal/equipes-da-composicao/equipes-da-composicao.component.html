@@ -31,14 +31,14 @@
                                     <div *ngFor="let equipe of equipes" class="father__equipes-da-composicao__equipe">
                                           <app-regular-flex-box
                                                 [model]="{ style: { 'flex-direction': 'column', 'justify-content': 'start', 'align-items': 'start', gap: '16px' } }">
-                                                <span class="father__equipes-da-composicao__equipe__title">
+                                                <b>
                                                       <app-regular-text>
                                                             <app-medium-text>
                                                                   <i class="{{ equipe.title.icon }}"></i>
                                                             </app-medium-text>
                                                             {{ equipe.title.innerText }}
                                                       </app-regular-text>
-                                                </span>
+                                                </b>
                                                 <app-regular-list
                                                       [model]="{ style: { 'flex-direction': 'column', 'justify-content': 'start', 'align-items': 'start', gap: '8px' } }">
                                                       <li *ngFor="let item of equipe.list">
