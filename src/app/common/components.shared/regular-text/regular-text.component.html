@@ -1,3 +1,5 @@
-<span [ngStyle]="model?.style">
-      <ng-content></ng-content>
+<span class="father" [ngStyle]="model?.style">
+      <span class="father__child">
+            <ng-content></ng-content>
+      </span>
 </span>

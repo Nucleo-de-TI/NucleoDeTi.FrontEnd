@@ -4,7 +4,9 @@ div.father__equipes-da-composicao {
 }
 
 div.father__equipes-da-composicao__equipe {
-      width: 320px;
+      @media (min-width: 900px) {
+            width: 320px;
+      }
 }
 
 span.father__equipes-da-composicao__equipe__title {

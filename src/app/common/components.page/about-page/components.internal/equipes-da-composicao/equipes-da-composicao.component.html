@@ -8,8 +8,26 @@
                                     [model]="{ style: { 'justify-content': 'center', 'text-align': 'center' } }">
                                     Equipes da Composição do GENTI
                               </app-regular-section-box-title>
-                              <app-regular-flex-box
-                                    [model]="{ style: { 'flex-wrap': 'wrap', 'flex-direction': 'row', 'justify-content': 'space-evenly', 'align-items': 'start', gap: '42px' } }">
+                              <app-regular-flex-box [model]="{ 
+                                          style: { 
+                                                'flex-direction': 'column', 
+                                                'justify-content': 'space-evenly', 
+                                                'align-items': 'start', 
+                                                gap: '42px' 
+                                          },
+                                          media: [
+                                                {
+                                                      'min-width': 900,
+                                                      style: { 
+                                                            'flex-wrap': 'wrap',
+                                                            'flex-direction': 'row', 
+                                                            'justify-content': 'space-evenly', 
+                                                            'align-items': 'start', 
+                                                            gap: '42px' 
+                                                      }
+                                                }
+                                          ]
+                                    }">
                                     <div *ngFor="let equipe of equipes" class="father__equipes-da-composicao__equipe">
                                           <app-regular-flex-box
                                                 [model]="{ style: { 'flex-direction': 'column', 'justify-content': 'start', 'align-items': 'start', gap: '16px' } }">

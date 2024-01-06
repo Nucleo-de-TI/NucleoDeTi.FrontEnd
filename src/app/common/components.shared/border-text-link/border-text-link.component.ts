@@ -20,8 +20,8 @@ import { CommonModule } from '@angular/common';
   ],
 })
 export class BorderTextLinkComponent implements OnInit {
-  @Input() href!: string;
-  @Input() target!: string;
+  @Input() href?: string;
+  @Input() target?: string;
   @Input() model!: IBorderTextButton;
   private _linkClassController = {
     '--blue': false,
@@ -29,7 +29,7 @@ export class BorderTextLinkComponent implements OnInit {
   };
 
   ngOnInit(): void {
-    this._linkClassController[`--${this.model.style.color}`] = true;
+    this._linkClassController[`--${this.model?.style.color}`] = true;
   }
 
   get linkClassController() {

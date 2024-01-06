@@ -12,7 +12,7 @@ import { RegularTextComponent } from "../regular-text/regular-text.component";
     imports: [CommonModule, RegularTextLinkComponent, RegularTextComponent]
 })
 export class AnimatedTextLinkComponent {
-  @Input() href!: string;
-  @Input() target!: string;
+  @Input() href?: string;
+  @Input() target?: string;
   @Input() model?: IAnimatedLink;
 }

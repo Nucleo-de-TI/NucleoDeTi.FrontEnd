@@ -13,16 +13,20 @@ import { RegularFlexBoxDirective } from '../../directives/regular-flex-box/regul
 })
 export class RegularListComponent implements OnInit {
   @Input() model!: IRegularList;
-  listClassController = {
+  private _listClassController = {
     '--padding-left': false,
   };
+
+  get listClassController() {
+    return this._listClassController;
+  }
 
   ngOnInit(): void {
     if (
       !this.model.style['list-style'] ||
       this.model.style['list-style'] === 'disc'
     ) {
-      this.listClassController['--padding-left'] = true;
+      this._listClassController['--padding-left'] = true;
     }
   }
 }
