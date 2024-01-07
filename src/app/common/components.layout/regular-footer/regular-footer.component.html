@@ -1,62 +1,54 @@
-<app-regular-vertical-padding></app-regular-vertical-padding>
+<app-small-vertical-padding></app-small-vertical-padding>
 <footer>
   <app-regular-section-box>
-      <div class="father">
-        <div class="father__content">
-          <div class="father__content__brand-image">
-            <app-regular-brand-icon
-              [src]="'./assets/images/brand/icon.blue.png'"
-            ></app-regular-brand-icon>
-          </div>
-          <app-regular-list
-            [model]="{ style: { 'flex-direction': 'column', 'list-style': 'none', gap: '8px' } }"
-          >
-            <li>
-              <h4>
-                {{ model.infos[0].title }}
-              </h4>
-            </li>
-            <li *ngFor="let message of model.infos[0].messages">
-              <p>
-                <app-regular-text>
-                  {{ message }}
-                </app-regular-text>
-              </p>
-            </li>
-          </app-regular-list>
-          <div class="father__content__link-list">
-            <app-regular-list
-              [model]="{ style: { 'flex-direction': 'row', 'list-style': 'none', gap: '28px' } }"
-            >
-              <li *ngFor="let link of model.links">
-                <app-medium-text-link [href]="link.href">
-                  <i class="{{ link.icon }}"></i>
-                </app-medium-text-link>
-              </li>
-            </app-regular-list>
-          </div>
-          <app-regular-list
-            [model]="{ style: { 'flex-direction': 'column', 'list-style': 'none', gap: '8px' } }"
-          >
-            <li>
-              <h4>
-                {{ model.infos[1].title }}
-              </h4>
-            </li>
-            <li *ngFor="let message of model.infos[1].messages">
-              <p>
-                <app-regular-text>
-                  {{ message }}
-                </app-regular-text>
-              </p>
+    <div class="father">
+      <div class="father__content">
+        <div class="father__content__brand-image">
+          <app-regular-brand-icon [src]="'./assets/images/brand/icon.blue.png'"></app-regular-brand-icon>
+        </div>
+        <app-regular-list
+          [model]="{ style: { 'flex-direction': 'column', 'justify-content': 'center', 'align-items': 'center','list-style': 'none', gap: '8px' } }">
+          <li>
+            <h4>
+              {{ model.infos[0].title }}
+            </h4>
+          </li>
+          <li *ngFor="let message of model.infos[0].messages">
+            <p>
+              <app-regular-text>
+                {{ message }}
+              </app-regular-text>
+            </p>
+          </li>
+        </app-regular-list>
+        <div class="father__content__link-list">
+          <app-regular-list [model]="{ style: { 'flex-direction': 'row', 'list-style': 'none', gap: '28px' } }">
+            <li *ngFor="let link of model.links">
+              <app-medium-text-link [href]="link.href">
+                <i class="{{ link.icon }}"></i>
+              </app-medium-text-link>
             </li>
           </app-regular-list>
-          <div class="father__content__brand-image">
-            <app-regular-uniso-icon
-              [src]="'./assets/images/uniso/icon.blue.png'"
-            ></app-regular-uniso-icon>
-          </div>
+        </div>
+        <app-regular-list
+          [model]="{ style: { 'flex-direction': 'column', 'justify-content': 'center', 'align-items': 'center','list-style': 'none', gap: '8px' } }">
+          <li>
+            <h4>
+              {{ model.infos[1].title }}
+            </h4>
+          </li>
+          <li *ngFor="let message of model.infos[1].messages">
+            <p>
+              <app-regular-text>
+                {{ message }}
+              </app-regular-text>
+            </p>
+          </li>
+        </app-regular-list>
+        <div class="father__content__brand-image">
+          <app-regular-uniso-icon [src]="'./assets/images/uniso/icon.blue.png'"></app-regular-uniso-icon>
         </div>
       </div>
+    </div>
   </app-regular-section-box>
 </footer>

@@ -10,27 +10,33 @@ import { DescritivoSobreLogoComponent } from './components.internal/descritivo-s
 import { GentiComponent } from './components.internal/genti/genti.component';
 import { EnsinoExtensaoPesquisaComponent } from './components.internal/ensino-extensao-pesquisa/ensino-extensao-pesquisa.component';
 import { FormacaoDaComissaoComponent } from './components.internal/formacao-da-comissao/formacao-da-comissao.component';
+import { EstruturaComponent } from "./components.internal/estrutura/estrutura.component";
+import { EquipesDaComposicaoComponent } from "./components.internal/equipes-da-composicao/equipes-da-composicao.component";
+import { RegularMainComponent } from "../../components.shared/regular-main/regular-main.component";
 
 @Component({
-  selector: 'app-about-page',
-  standalone: true,
-  templateUrl: './about-page.component.html',
-  styleUrl: './about-page.component.scss',
-  imports: [
-    RegularHeaderComponent,
-    RegularFooterComponent,
-    GrupoDeEstudoComponent,
-    HistoricoComponent,
-    ObjetivosEComposicaoComponent,
-    DescritivoSobreLogoComponent,
-    GentiComponent,
-    EnsinoExtensaoPesquisaComponent,
-    FormacaoDaComissaoComponent,
-  ],
+    selector: 'app-about-page',
+    standalone: true,
+    templateUrl: './about-page.component.html',
+    styleUrl: './about-page.component.scss',
+    imports: [
+        RegularHeaderComponent,
+        RegularFooterComponent,
+        GrupoDeEstudoComponent,
+        HistoricoComponent,
+        ObjetivosEComposicaoComponent,
+        DescritivoSobreLogoComponent,
+        GentiComponent,
+        EnsinoExtensaoPesquisaComponent,
+        FormacaoDaComissaoComponent,
+        EstruturaComponent,
+        EquipesDaComposicaoComponent,
+        RegularMainComponent
+    ]
 })
 export class AboutPageComponent {
-  public readonly homePageHeaderService = new HomePageHeaderService();
-  public readonly homePageFooterService = new HomePageFooterService();
+  readonly homePageHeaderService = new HomePageHeaderService();
+  readonly homePageFooterService = new HomePageFooterService();
 
   constructor() {
     this.homePageHeaderService.model.action.links[0].selected = true;

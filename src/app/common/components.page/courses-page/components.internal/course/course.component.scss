@@ -1,0 +1,19 @@
+div.father {
+      color: var(--primary-color);
+}
+
+i.father__title__icon {
+      display: none;
+
+      @media (min-width: 800px) {
+            display: block;
+      }
+}
+
+div.father__info-text {
+      background-color: var(--quaternary-color);
+}
+
+div.father__accordion:last-of-type hr {
+      display: none;
+}

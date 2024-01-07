@@ -1,3 +1,9 @@
 a {
-      width: 100%;
+      &.--light-blue {
+            color: var(--light-blue);
+      }
+
+      &.--blue {
+            color: var(--blue);
+      }
 }

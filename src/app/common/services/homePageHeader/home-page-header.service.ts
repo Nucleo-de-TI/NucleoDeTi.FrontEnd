@@ -1,51 +1,11 @@
 import { Injectable } from '@angular/core';
-import { IRegularHeader } from '../../models.layout/regular-header/regular-header';
-import { UiThemeService } from '../uiTheme/ui-theme.service';
+import { IRegularHeader } from '../../models/regular-header/regular-header';
 
 @Injectable({
   providedIn: 'root',
 })
 export class HomePageHeaderService {
-  private readonly uiThemeService = new UiThemeService();
-  public readonly model: IRegularHeader = {
-    socialHub: {
-      title: 'CENTRAL DE ATENDIMENTO',
-      link: '#',
-      links: [
-        {
-          href: '#',
-          icon: 'bi bi-facebook',
-        },
-        {
-          href: '#',
-          icon: 'bi bi-instagram',
-        },
-        {
-          href: '#',
-          icon: 'bi bi-linkedin',
-        },
-        {
-          href: '#',
-          icon: 'bi bi-envelope-at',
-        },
-      ],
-      buttons: [
-        {
-          icon: 'bi bi-megaphone',
-          callback: () => {},
-        },
-        {
-          icon: 'bi bi-brightness-high',
-          callback: () => {
-            this.uiThemeService.changeUiTheme();
-          },
-        },
-        {
-          icon: 'bi bi-ear',
-          callback: () => {},
-        },
-      ],
-    },
+  readonly model: IRegularHeader = {
     action: {
       links: [
         {
@@ -54,17 +14,17 @@ export class HomePageHeaderService {
           innerText: 'Sobre',
         },
         {
-          href: '#',
+          href: 'courses',
           icon: 'bi bi-book',
           innerText: 'Cursos',
         },
         {
-          href: '#',
+          href: 'student-guide',
           icon: 'bi bi-signpost-split',
           innerText: 'Guia do Aluno',
         },
         {
-          href: '#',
+          href: 'events',
           icon: 'bi bi-calendar-event',
           innerText: 'Eventos',
         },
@@ -81,7 +41,7 @@ export class HomePageHeaderService {
         {
           href: '#',
           icon: 'bi bi-file-earmark-person',
-          innerText: 'Currículo',
+          innerText: 'Currículos',
         },
       ],
     },

@@ -3,7 +3,7 @@ import { RegularTextLinkComponent } from '../regular-text-link/regular-text-link
 import { SmallVerticalPaddingComponent } from '../small-vertical-padding/small-vertical-padding.component';
 import { RegularHorizontalPaddingComponent } from '../regular-horizontal-padding/regular-horizontal-padding.component';
 import { RegularTextComponent } from '../regular-text/regular-text.component';
-import { IBorderTextButton } from '../../models.shared/border-text-button/border-text-button';
+import { IBorderTextButton } from '../../models/border-text-button/border-text-button';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -20,17 +20,18 @@ import { CommonModule } from '@angular/common';
   ],
 })
 export class BorderTextLinkComponent implements OnInit {
-  @Input() href!: string;
-  @Input() target!: string;
-  @Input() model!: IBorderTextButton;
+  @Input() href?: string;
+  @Input() target?: string;
+  @Input() download?: boolean;
+  @Input() model?: IBorderTextButton;
   private _linkClassController = {
-    '--blue': false,
-    '--yellow': false,
+    '--filled': false,
   };
 
   ngOnInit(): void {
-    this._linkClassController[`--${this.model.style.color}`] = true;
-    console.log(this._linkClassController);
+    if (this.model && this.model.style.filled) {
+      this._linkClassController['--filled'] = this.model.style.filled;
+    }
   }
 
   get linkClassController() {

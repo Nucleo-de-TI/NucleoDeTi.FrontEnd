@@ -1,0 +1,21 @@
+button.father__accordion-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 18px;
+}
+
+span.father__accordion-button__icon {
+  &.--on {
+    transform: rotate(-180deg);
+  }
+
+  transition: var(--regular-animation-process);
+  font-size: 24px;
+}
+
+div.father__accordion-content {
+  transition: var(--regular-animation-process);
+  overflow: hidden;
+}

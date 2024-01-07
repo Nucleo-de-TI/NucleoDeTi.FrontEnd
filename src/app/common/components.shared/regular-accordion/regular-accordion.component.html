@@ -1,0 +1,19 @@
+<div class="father">
+      <app-small-vertical-padding>
+            <button class="father__accordion-button" (click)="onAccordionButtonClick()">
+                  <b>
+                        <app-regular-text>
+                              {{ model.title }}
+                        </app-regular-text>
+                  </b>
+                  <span class="father__accordion-button__icon" [ngClass]="accordionButtonIconClassController">
+                        <i class="bi bi-chevron-down"></i>
+                  </span>
+            </button>
+            <div #accordionContent class="father__accordion-content" [ngStyle]="accordionContentStyleController">
+                  <app-small-vertical-padding>
+                        <ng-content></ng-content>
+                  </app-small-vertical-padding>
+            </div>
+      </app-small-vertical-padding>
+</div>

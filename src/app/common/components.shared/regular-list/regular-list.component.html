@@ -1,3 +1,8 @@
-<ul [ngStyle]="model.style" [ngClass]="listClassController">
-      <ng-content></ng-content>
+<ul
+  [ngStyle]="model.style"
+  [ngClass]="listClassController"
+  appRegularFlexBox
+  [model]="model"
+>
+  <ng-content></ng-content>
 </ul>

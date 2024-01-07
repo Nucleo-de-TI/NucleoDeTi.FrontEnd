@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { UiThemeService } from './common/services/uiTheme/ui-theme.service';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +9,6 @@ import { UiThemeService } from './common/services/uiTheme/ui-theme.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'NucleoDeTi.FrontEnd';
-
-  ngOnInit(): void {
-    new UiThemeService()
-  }
 }

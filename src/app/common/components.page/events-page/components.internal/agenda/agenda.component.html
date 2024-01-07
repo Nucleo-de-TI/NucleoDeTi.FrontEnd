@@ -1,0 +1,27 @@
+<div class="father">
+      <div class="father__agenda">
+            <app-regular-section-box>
+                  <app-regular-section-box-title>
+                        Agenda 2024/01
+                  </app-regular-section-box-title>
+                  <app-regular-list
+                        [model]="{ style: { 'align-items': 'start', 'justify-content': 'start', 'flex-direction': 'column', 'gap': '16px', 'list-style': 'none' } }">
+                        <li *ngFor="let event of events">
+                              <app-regular-text>
+                                    <app-medium-text>
+                                          <i class="bi bi-calendar-event"></i>
+                                    </app-medium-text>
+                                    <span>
+                                          <b>
+                                                {{ event.date }}
+                                          </b>
+                                          -
+                                          {{ event.text }}
+                                    </span>
+                              </app-regular-text>
+                  </app-regular-list>
+            </app-regular-section-box>
+      </div>
+</div>
+<app-small-vertical-padding></app-small-vertical-padding>
+<app-small-vertical-padding></app-small-vertical-padding>

@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { IRegularFooter } from '../../models.layout/regular-footer/regular-footer';
+import { IRegularFooter } from '../../models/regular-footer/regular-footer';
 
 @Injectable({
   providedIn: 'root',
 })
 export class HomePageFooterService {
-  public readonly model: IRegularFooter = {
+  readonly model: IRegularFooter = {
     infos: [
       {
         title: 'Horário de Atendimento',

@@ -1,0 +1,10 @@
+div.father__equipes-da-composicao {
+  background-color: var(--quaternary-color);
+  color: var(--primary-color);
+}
+
+div.father__equipes-da-composicao__equipe {
+      @media (min-width: 900px) {
+            width: 320px;
+      }
+}

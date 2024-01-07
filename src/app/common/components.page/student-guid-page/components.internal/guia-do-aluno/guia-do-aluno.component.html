@@ -1,0 +1,32 @@
+<div class="father">
+      <app-regular-section-box>
+            <div class="father__guia-do-aluno">
+                  <app-regular-section-box-title>
+                        Guia do Aluno
+                  </app-regular-section-box-title>
+                  <p>
+                        Baixe o Guia do seu curso para obter informações detalhadas. No guia, você terá acesso aos
+                        horários das aulas, formas de contato com os professores e informações sobre os laboratórios
+                        utilizados nas atividades acadêmicas.
+                  </p>
+                  <app-small-vertical-padding></app-small-vertical-padding>
+                  <app-regular-flex-box
+                        [model]="{ style: { 'flex-direction': 'column', 'align-items': 'center', 'justify-content': 'center', 'gap': '28px' } }">
+                        <div class="father__guia-do-aluno__box" *ngFor="let studentGuide of studentGuides">
+                              <app-small-section-box>
+                                    <app-regular-flex-box
+                                          [model]="{ style: { 'flex-direction': 'column', 'align-items': 'center', 'justify-content': 'center', 'gap': '8px' } }">
+                                          <app-small-section-box-title>
+                                                {{ studentGuide.course }}
+                                          </app-small-section-box-title>
+                                          <app-border-text-link [model]="{ style: { filled: true } }"
+                                                [href]="studentGuide.downloadLink" [download]="true">
+                                                Download
+                                          </app-border-text-link>
+                                    </app-regular-flex-box>
+                              </app-small-section-box>
+                        </div>
+                  </app-regular-flex-box>
+            </div>
+      </app-regular-section-box>
+</div>

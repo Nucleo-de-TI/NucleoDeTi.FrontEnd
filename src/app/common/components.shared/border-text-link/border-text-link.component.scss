@@ -2,27 +2,17 @@ div {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 52px;
+  width: 100%;
 
   a {
-    &.--blue {
-      &:hover {
-        background-color: var(--primary-color);
-        color: var(--tertiary-color);
-      }
-
-      border: var(--regular-border-size) solid var(--primary-color);
-      color: var(--primary-color);
+    &:hover {
+      background-color: var(--primary-color);
+      color: var(--tertiary-color);
     }
 
-    &.--yellow {
-      &:hover {
-        background-color: var(--yellow);
-        color: white;
-      }
-
-      border: var(--regular-border-size) solid var(--yellow);
-      color: var(--yellow);
+    &.--filled {
+      background-color: var(--primary-color);
+      color: var(--tertiary-color);
     }
 
     display: flex;
@@ -31,6 +21,8 @@ div {
     width: 100%;
     max-width: 460px;
     white-space: nowrap;
+    border: var(--regular-border-size) solid var(--primary-color);
+    color: var(--primary-color);
     font-size: 18px;
     padding: 14px 0px;
     transition: var(--regular-animation-process);

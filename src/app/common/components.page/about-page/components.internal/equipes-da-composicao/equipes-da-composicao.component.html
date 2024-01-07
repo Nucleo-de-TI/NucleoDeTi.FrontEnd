@@ -1,0 +1,55 @@
+<div class="father">
+      <app-regular-vertical-padding>
+            <div class="father__equipes-da-composicao">
+                  <app-regular-section-box>
+                        <app-regular-flex-box
+                              [model]="{ style: { 'flex-direction': 'column', 'justify-content': 'center', 'align-items': 'center', gap: '16px' } }">
+                              <app-regular-section-box-title
+                                    [model]="{ style: { 'justify-content': 'center', 'text-align': 'center' } }">
+                                    Equipes da Composição do GENTI
+                              </app-regular-section-box-title>
+                              <app-regular-flex-box [model]="{ 
+                                          style: { 
+                                                'flex-direction': 'column', 
+                                                'justify-content': 'space-evenly', 
+                                                'align-items': 'start', 
+                                                gap: '42px' 
+                                          },
+                                          media: [
+                                                {
+                                                      'min-width': 900,
+                                                      style: { 
+                                                            'flex-wrap': 'wrap',
+                                                            'flex-direction': 'row', 
+                                                            'justify-content': 'space-evenly', 
+                                                            'align-items': 'start', 
+                                                            gap: '42px' 
+                                                      }
+                                                }
+                                          ]
+                                    }">
+                                    <div *ngFor="let equipe of equipes" class="father__equipes-da-composicao__equipe">
+                                          <app-regular-flex-box
+                                                [model]="{ style: { 'flex-direction': 'column', 'justify-content': 'start', 'align-items': 'start', gap: '16px' } }">
+                                                <b>
+                                                      <app-regular-text>
+                                                            <app-medium-text>
+                                                                  <i class="{{ equipe.title.icon }}"></i>
+                                                            </app-medium-text>
+                                                            {{ equipe.title.innerText }}
+                                                      </app-regular-text>
+                                                </b>
+                                                <app-regular-list
+                                                      [model]="{ style: { 'flex-direction': 'column', 'justify-content': 'start', 'align-items': 'start', gap: '8px' } }">
+                                                      <li *ngFor="let item of equipe.list">
+                                                            {{ item }}
+                                                      </li>
+                                                </app-regular-list>
+                                          </app-regular-flex-box>
+                                    </div>
+                              </app-regular-flex-box>
+                        </app-regular-flex-box>
+                  </app-regular-section-box>
+            </div>
+      </app-regular-vertical-padding>
+</div>

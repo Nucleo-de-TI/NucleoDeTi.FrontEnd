@@ -9,6 +9,6 @@ import { MediumTextComponent } from "../medium-text/medium-text.component";
     imports: [MediumTextComponent]
 })
 export class MediumTextLinkComponent {
-  @Input() href!: string;
-  @Input() target!: string;
+  @Input() href?: string;
+  @Input() target?: string;
 }
