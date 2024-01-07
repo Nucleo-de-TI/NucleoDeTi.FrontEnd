@@ -14,5 +14,6 @@ import { RegularTextComponent } from "../regular-text/regular-text.component";
 export class AnimatedTextLinkComponent {
   @Input() href?: string;
   @Input() target?: string;
+  @Input() download?: boolean;
   @Input() model?: IAnimatedLink;
 }

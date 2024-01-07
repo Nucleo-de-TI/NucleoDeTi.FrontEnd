@@ -1,5 +1,5 @@
 <div>
-  <a [attr.download]="download ? '' : null" href="{{ href }}" target="{{ target }}" [ngClass]="linkClassController">
+  <a href="{{ href }}" target="{{ target }}" [ngClass]="linkClassController" [attr.download]="download ? '' : null">
     <app-regular-horizontal-padding>
       <app-regular-text>
         <ng-content></ng-content>
