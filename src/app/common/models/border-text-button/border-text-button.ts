@@ -1,5 +1,5 @@
 export interface IStyle {
-  color: 'blue' | 'yellow';
+  filled?: boolean;
 }
 
 export interface IBorderTextButton {

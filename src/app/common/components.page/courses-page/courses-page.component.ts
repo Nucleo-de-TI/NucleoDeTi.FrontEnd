@@ -6,18 +6,22 @@ import { RegularFooterComponent } from '../../components.layout/regular-footer/r
 import { CourseComponent } from './components.internal/course/course.component';
 import { ICourse } from './models.internal/course/course';
 import { CommonModule } from '@angular/common';
+import { SmallVerticalPaddingComponent } from "../../components.shared/small-vertical-padding/small-vertical-padding.component";
+import { RegularMainComponent } from "../../components.shared/regular-main/regular-main.component";
 
 @Component({
-  selector: 'app-courses-page',
-  standalone: true,
-  templateUrl: './courses-page.component.html',
-  styleUrl: './courses-page.component.scss',
-  imports: [
-    CommonModule,
-    RegularHeaderComponent,
-    RegularFooterComponent,
-    CourseComponent,
-  ],
+    selector: 'app-courses-page',
+    standalone: true,
+    templateUrl: './courses-page.component.html',
+    styleUrl: './courses-page.component.scss',
+    imports: [
+        CommonModule,
+        RegularHeaderComponent,
+        RegularFooterComponent,
+        CourseComponent,
+        SmallVerticalPaddingComponent,
+        RegularMainComponent
+    ]
 })
 export class CoursesPageComponent {
   readonly homePageHeaderService = new HomePageHeaderService();

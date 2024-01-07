@@ -19,7 +19,7 @@ export class HomePageHeaderService {
           innerText: 'Cursos',
         },
         {
-          href: '#',
+          href: 'student-guide',
           icon: 'bi bi-signpost-split',
           innerText: 'Guia do Aluno',
         },

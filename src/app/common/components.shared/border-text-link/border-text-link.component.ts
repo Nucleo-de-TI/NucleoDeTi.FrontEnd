@@ -22,14 +22,16 @@ import { CommonModule } from '@angular/common';
 export class BorderTextLinkComponent implements OnInit {
   @Input() href?: string;
   @Input() target?: string;
-  @Input() model!: IBorderTextButton;
+  @Input() download?: boolean;
+  @Input() model?: IBorderTextButton;
   private _linkClassController = {
-    '--blue': false,
-    '--yellow': false,
+    '--filled': false,
   };
 
   ngOnInit(): void {
-    this._linkClassController[`--${this.model?.style.color}`] = true;
+    if (this.model && this.model.style.filled) {
+      this._linkClassController['--filled'] = this.model.style.filled;
+    }
   }
 
   get linkClassController() {

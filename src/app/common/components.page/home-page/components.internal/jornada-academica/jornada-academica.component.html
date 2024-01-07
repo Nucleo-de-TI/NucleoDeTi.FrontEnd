@@ -4,8 +4,7 @@
       <app-regular-section-box-title>
         Jornada Acadêmica 2023
       </app-regular-section-box-title>
-      <app-regular-flex-box
-        [model]="{
+      <app-regular-flex-box [model]="{
           style: {
             'flex-direction': 'column',
             'justify-content': 'space-between',
@@ -23,28 +22,19 @@
               }
             }
           ]
-        }"
-      >
+        }">
         <a class="father__jornada-academica__image" href="#">
-          <img
-            src="./assets/images/general/fipyhporpugf.png"
-            alt="Computer Image"
-          />
+          <img src="./assets/images/general/fipyhporpugf.png" alt="Computer Image" />
         </a>
         <a class="father__jornada-academica__image" href="#">
-          <img
-            src="./assets/images/general/tdybjtkcxelr.png"
-            alt="Computer Image"
-          />
+          <img src="./assets/images/general/tdybjtkcxelr.png" alt="Computer Image" />
         </a>
         <a class="father__jornada-academica__image" href="#">
-          <img
-            src="./assets/images/general/gocstvqqptrr.png"
-            alt="Computer Image"
-          />
+          <img src="./assets/images/general/gocstvqqptrr.png" alt="Computer Image" />
         </a>
       </app-regular-flex-box>
-      <app-border-text-link [href]="'#'" [model]="{ style: { color: 'blue' } }">
+      <app-small-vertical-padding></app-small-vertical-padding>
+      <app-border-text-link [href]="'#'" [model]="{ style: { filled: false } }">
         Ver eventos
       </app-border-text-link>
     </div>

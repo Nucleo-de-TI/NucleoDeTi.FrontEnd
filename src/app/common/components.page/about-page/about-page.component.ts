@@ -12,6 +12,7 @@ import { EnsinoExtensaoPesquisaComponent } from './components.internal/ensino-ex
 import { FormacaoDaComissaoComponent } from './components.internal/formacao-da-comissao/formacao-da-comissao.component';
 import { EstruturaComponent } from "./components.internal/estrutura/estrutura.component";
 import { EquipesDaComposicaoComponent } from "./components.internal/equipes-da-composicao/equipes-da-composicao.component";
+import { RegularMainComponent } from "../../components.shared/regular-main/regular-main.component";
 
 @Component({
     selector: 'app-about-page',
@@ -29,7 +30,8 @@ import { EquipesDaComposicaoComponent } from "./components.internal/equipes-da-c
         EnsinoExtensaoPesquisaComponent,
         FormacaoDaComissaoComponent,
         EstruturaComponent,
-        EquipesDaComposicaoComponent
+        EquipesDaComposicaoComponent,
+        RegularMainComponent
     ]
 })
 export class AboutPageComponent {

@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 import { RegularHorizontalPaddingComponent } from "../../components.shared/regular-horizontal-padding/regular-horizontal-padding.component";
 import { RegularSectionBoxComponent } from "../../components.shared/regular-section-box/regular-section-box.component";
 import { SmallSectionBoxComponent } from "../../components.shared/small-section-box/small-section-box.component";
+import { SmallVerticalPaddingComponent } from "../../components.shared/small-vertical-padding/small-vertical-padding.component";
 
 @Component({
     selector: 'app-regular-footer',
@@ -31,7 +32,8 @@ import { SmallSectionBoxComponent } from "../../components.shared/small-section-
         MediumTextLinkComponent,
         RegularHorizontalPaddingComponent,
         RegularSectionBoxComponent,
-        SmallSectionBoxComponent
+        SmallSectionBoxComponent,
+        SmallVerticalPaddingComponent
     ]
 })
 export class RegularFooterComponent {
