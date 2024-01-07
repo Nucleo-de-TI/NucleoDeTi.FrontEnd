@@ -29,7 +29,7 @@ export class HomePageHeaderService {
           innerText: 'Eventos',
         },
         {
-          href: '#',
+          href: 'partners',
           icon: 'bi bi-people-fill',
           innerText: 'Parceiros',
         },
