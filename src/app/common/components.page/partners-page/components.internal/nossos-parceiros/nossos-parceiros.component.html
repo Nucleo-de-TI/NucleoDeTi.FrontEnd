@@ -11,18 +11,68 @@
                                     'align-items': 'center',
                                     'justify-content': 'center',
                                     'gap': '28px'
-                              } 
+                              },
+                              media: [
+                                    {
+                                          'min-width': 800, 
+                                          style: {
+                                                'flex-direction': 'row',
+                                                'align-items': 'center',
+                                                'justify-content': 'center',
+                                                'gap': '28px'
+                                          }
+                                    }
+                              ]
                         }">
-                              <app-regular-flex-box [model]="{ 
-                                    style: {
-                                          'flex-direction': 'column',
-                                          'align-items': 'center',
-                                          'justify-content': 'center',
-                                          'gap': '28px'
-                                    } 
-                              }">
-                              
-                              </app-regular-flex-box>
+                              <div *ngFor="let partnersColumn of partners" class="father__nossos-parceiros__column">
+                                    <app-regular-flex-box [model]="{ 
+                                          style: {
+                                                'flex-direction': 'column',
+                                                'align-items': 'center',
+                                                'justify-content': 'center',
+                                                'gap': '28px'
+                                          },
+                                          media: [
+                                                {
+                                                      'min-width': 1200, 
+                                                      style: {
+                                                            'flex-direction': 'row',
+                                                            'align-items': 'center',
+                                                            'justify-content': 'center',
+                                                            'gap': '28px'
+                                                      }
+                                                }
+                                          ]
+                                                }">
+                                          <div *ngFor="let partnersRow of partnersColumn"
+                                                class="father__nossos-parceiros__column__row">
+                                                <app-regular-flex-box [model]="{ 
+                                                      style: {
+                                                            'flex-direction': 'column',
+                                                            'align-items': 'center',
+                                                            'justify-content': 'center',
+                                                            'gap': '28px'
+                                                      } 
+                                                }">
+                                                      <div class="father__nossos-parceiros__column__row__box"
+                                                            *ngFor="let partner of partnersRow">
+                                                            <app-small-section-box>
+                                                                  <app-regular-flex-box
+                                                                        [model]="{ style: { 'align-items': 'center', 'justify-content': 'center' } }">
+                                                                        <div
+                                                                              class="father__nossos-parceiros__column__row__box__content">
+                                                                              <app-regular-brand-image
+                                                                                    [href]="partner.href"
+                                                                                    [src]="partner.img"
+                                                                                    [target]="'_blank'"></app-regular-brand-image>
+                                                                        </div>
+                                                                  </app-regular-flex-box>
+                                                            </app-small-section-box>
+                                                      </div>
+                                                </app-regular-flex-box>
+                                          </div>
+                                    </app-regular-flex-box>
+                              </div>
                         </app-regular-flex-box>
                   </app-regular-section-box>
             </div>
