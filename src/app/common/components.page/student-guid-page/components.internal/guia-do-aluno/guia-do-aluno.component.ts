@@ -9,20 +9,20 @@ import { RegularFlexBoxComponent } from '../../../../components.shared/regular-f
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-guia-do-aluno',
-  standalone: true,
-  templateUrl: './guia-do-aluno.component.html',
-  styleUrl: './guia-do-aluno.component.scss',
-  imports: [
-    CommonModule,
-    RegularSectionBoxComponent,
-    RegularSectionBoxTitleComponent,
-    SmallVerticalPaddingComponent,
-    SmallSectionBoxComponent,
-    SmallSectionBoxTitleComponent,
-    BorderTextLinkComponent,
-    RegularFlexBoxComponent,
-  ],
+    selector: 'app-guia-do-aluno',
+    standalone: true,
+    templateUrl: './guia-do-aluno.component.html',
+    styleUrl: './guia-do-aluno.component.scss',
+    imports: [
+        CommonModule,
+        RegularSectionBoxComponent,
+        RegularSectionBoxTitleComponent,
+        SmallVerticalPaddingComponent,
+        SmallSectionBoxComponent,
+        SmallSectionBoxTitleComponent,
+        BorderTextLinkComponent,
+        RegularFlexBoxComponent,
+    ]
 })
 export class GuiaDoAlunoComponent {
   readonly studentGuides = [

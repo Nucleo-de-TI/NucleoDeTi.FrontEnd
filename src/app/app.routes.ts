@@ -3,6 +3,7 @@ import { HomePageComponent } from './common/components.page/home-page/home-page.
 import { AboutPageComponent } from './common/components.page/about-page/about-page.component';
 import { CoursesPageComponent } from './common/components.page/courses-page/courses-page.component';
 import { StudentGuidPageComponent } from './common/components.page/student-guid-page/student-guid-page.component';
+import { EventsPageComponent } from './common/components.page/events-page/events-page.component';
 
 export const routes: Routes = [
   {
@@ -21,4 +22,8 @@ export const routes: Routes = [
     path: 'student-guide',
     component: StudentGuidPageComponent,
   },
+  {
+    path: 'events',
+    component: EventsPageComponent
+  }
 ];

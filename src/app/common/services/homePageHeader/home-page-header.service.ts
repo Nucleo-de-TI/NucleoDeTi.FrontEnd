@@ -24,7 +24,7 @@ export class HomePageHeaderService {
           innerText: 'Guia do Aluno',
         },
         {
-          href: '#',
+          href: 'events',
           icon: 'bi bi-calendar-event',
           innerText: 'Eventos',
         },
