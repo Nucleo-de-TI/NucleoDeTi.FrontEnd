@@ -1,0 +1,59 @@
+<div class="father">
+      <app-regular-vertical-padding>
+            <app-regular-horizontal-padding>
+                  <app-small-vertical-padding>
+                        <app-regular-section-box-title>
+                              <i class="{{ model.title.icon }}"></i>
+                              {{ model.title.innerText }}
+                        </app-regular-section-box-title>
+                  </app-small-vertical-padding>
+            </app-regular-horizontal-padding>
+            <div class="father__info-text">
+                  <app-regular-section-box>
+                        <app-regular-flex-box [model]="{ 
+                                    style: {
+                                          'justify-content': 'center', 
+                                          'align-items': 'center', 
+                                          'flex-direction': 'column', 
+                                          'gap': '60px' 
+                                    },
+                                    media: [
+                                          {
+                                                'min-width': 800,
+                                                style: {
+                                                      'justify-content': 'center', 
+                                                      'align-items': 'center', 
+                                                      'flex-direction': 'row', 
+                                                      'gap': '60px' 
+                                                }
+                                          }
+                                    ]
+                              }">
+                              <div *ngFor="let infoText of model.infoTexts">
+                                    <app-small-section-box-title>
+                                          {{ infoText.title }}
+                                    </app-small-section-box-title>
+                                    <p>
+                                          {{ infoText.text }}
+                                    </p>
+                              </div>
+                        </app-regular-flex-box>
+                  </app-regular-section-box>
+            </div>
+            <app-regular-horizontal-padding>
+                  <app-regular-vertical-padding>
+                        <div class="father__accordion" *ngFor="let accordion of model.accordions">
+                              <app-regular-accordion [model]="{ title: accordion.title }">
+                                    <app-regular-list
+                                          [model]="{ style: { 'align-items': 'start', 'justify-content': 'start', 'flex-direction': 'column', 'gap': '8px' } }">
+                                          <li *ngFor="let item of accordion.list">
+                                                {{ item }}
+                                          </li>
+                                    </app-regular-list>
+                              </app-regular-accordion>
+                              <hr>
+                        </div>
+                  </app-regular-vertical-padding>
+            </app-regular-horizontal-padding>
+      </app-regular-vertical-padding>
+</div>

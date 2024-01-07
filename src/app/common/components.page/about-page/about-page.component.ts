@@ -33,8 +33,8 @@ import { EquipesDaComposicaoComponent } from "./components.internal/equipes-da-c
     ]
 })
 export class AboutPageComponent {
-  public readonly homePageHeaderService = new HomePageHeaderService();
-  public readonly homePageFooterService = new HomePageFooterService();
+  readonly homePageHeaderService = new HomePageHeaderService();
+  readonly homePageFooterService = new HomePageFooterService();
 
   constructor() {
     this.homePageHeaderService.model.action.links[0].selected = true;

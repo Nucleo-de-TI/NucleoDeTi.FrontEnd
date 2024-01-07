@@ -5,7 +5,7 @@ import { IRegularHeader } from '../../models/regular-header/regular-header';
   providedIn: 'root',
 })
 export class HomePageHeaderService {
-  public readonly model: IRegularHeader = {
+  readonly model: IRegularHeader = {
     action: {
       links: [
         {
@@ -14,7 +14,7 @@ export class HomePageHeaderService {
           innerText: 'Sobre',
         },
         {
-          href: '#',
+          href: 'courses',
           icon: 'bi bi-book',
           innerText: 'Cursos',
         },

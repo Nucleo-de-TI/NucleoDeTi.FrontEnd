@@ -1,0 +1,11 @@
+div.father {
+      color: var(--primary-color);
+}
+
+div.father__info-text {
+      background-color: var(--quaternary-color);
+}
+
+div.father__accordion:last-of-type hr {
+      display: none;
+}

@@ -27,7 +27,7 @@ import { SmallVerticalPaddingComponent } from '../../../../components.shared/sma
   ],
 })
 export class EquipesDaComposicaoComponent {
-  public readonly equipes = [
+  readonly equipes = [
     {
       title: {
         innerText: 'Cordenadores',

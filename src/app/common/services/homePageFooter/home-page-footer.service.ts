@@ -5,7 +5,7 @@ import { IRegularFooter } from '../../models/regular-footer/regular-footer';
   providedIn: 'root',
 })
 export class HomePageFooterService {
-  public readonly model: IRegularFooter = {
+  readonly model: IRegularFooter = {
     infos: [
       {
         title: 'Horário de Atendimento',

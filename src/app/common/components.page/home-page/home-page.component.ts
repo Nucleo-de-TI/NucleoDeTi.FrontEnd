@@ -41,6 +41,6 @@ import { WelcomeImageComponent } from "./components.internal/welcome-image/welco
     ]
 })
 export class HomePageComponent {
-  public readonly homePageHeaderService = new HomePageHeaderService();
-  public readonly homePageFooterService = new HomePageFooterService();
+  readonly homePageHeaderService = new HomePageHeaderService();
+  readonly homePageFooterService = new HomePageFooterService();
 }
