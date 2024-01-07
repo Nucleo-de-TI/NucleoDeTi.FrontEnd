@@ -4,6 +4,59 @@
                   <app-regular-section-box-title>
                         Relembre!
                   </app-regular-section-box-title>
+                  <app-regular-flex-box [model]="{ 
+                        style: { 
+                              'justify-content': 'center', 
+                              'align-items': 'center', 
+                              'flex-direction': 'column', 
+                              'gap': '42px'
+                        },
+                        media: [
+                              {
+                                    'min-width': 800,
+                                    style: {
+                                          'justify-content': 'center', 
+                                          'align-items': 'center', 
+                                          'flex-direction': 'column', 
+                                          'gap': '28px'
+                                    }
+                              }
+                        ]
+                  }">
+                        <div *ngFor="let eventsRow of events">
+                              <app-regular-flex-box [model]="{ 
+                                    style: { 
+                                          'justify-content': 'center', 
+                                          'align-items': 'center', 
+                                          'flex-direction': 'column', 
+                                          'gap': '42px'
+                                    },
+                                    media: [
+                                          {
+                                                'min-width': 800,
+                                                style: {
+                                                      'justify-content': 'center', 
+                                                      'align-items': 'center', 
+                                                      'flex-direction': 'row', 
+                                                      'gap': '28px'
+                                                }
+                                          }
+                                    ]
+                              }">
+                                    <div *ngFor="let event of eventsRow" class="father__relembre__box">
+                                          <app-regular-flex-box
+                                                [model]="{ style: { 'justify-content': 'center', 'align-items': 'center', 'flex-direction': 'column', 'gap': '8px' } }">
+                                                <p>
+                                                      <b>
+                                                            {{ event.title }}
+                                                      </b>
+                                                </p>
+                                                <img src="{{ event.img }}" alt="{{ event.title }}">
+                                          </app-regular-flex-box>
+                                    </div>
+                              </app-regular-flex-box>
+                        </div>
+                  </app-regular-flex-box>
             </div>
       </app-regular-section-box>
 </div>

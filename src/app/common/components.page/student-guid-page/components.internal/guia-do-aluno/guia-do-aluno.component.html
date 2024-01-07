@@ -16,7 +16,7 @@
                               <app-small-section-box>
                                     <app-regular-flex-box
                                           [model]="{ style: { 'flex-direction': 'column', 'align-items': 'center', 'justify-content': 'center', 'gap': '8px' } }">
-                                          <app-small-section-box-title>
+                                          <app-small-section-box-title [model]="{ style: { 'text-align': 'center' } }">
                                                 {{ studentGuide.course }}
                                           </app-small-section-box-title>
                                           <app-border-text-link [model]="{ style: { filled: true } }"
