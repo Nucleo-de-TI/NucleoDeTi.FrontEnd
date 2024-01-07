@@ -2,8 +2,7 @@
       <app-regular-vertical-padding>
             <app-regular-horizontal-padding>
                   <div class="father__title">
-                        <app-regular-section-box-title>
-                              <i class="father__title__icon {{ model.title.icon }}"></i>
+                        <app-regular-section-box-title [model]="{ icon: model.title.icon }">
                               {{ model.title.innerText }}
                         </app-regular-section-box-title>
                   </div>

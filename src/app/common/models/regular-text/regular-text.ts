@@ -4,5 +4,5 @@ export interface IRegularTextStyle {
 }
 
 export interface IRegularText {
-  style: IRegularTextStyle;
+  style?: IRegularTextStyle;
 }

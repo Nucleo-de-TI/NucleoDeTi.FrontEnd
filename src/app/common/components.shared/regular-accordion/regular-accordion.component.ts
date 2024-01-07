@@ -49,18 +49,17 @@ export class RegularAccordionComponent implements AfterViewInit {
 
   @HostListener('window:resize', ['$event'])
   onResize() {
-    this._accordionButtonIconClassController['--on'] = false;
-    this._accordionContentStyleController.height = '0px';
-
     this.setAccordionContentHeight();
   }
 
   ngAfterViewInit() {
     this.setAccordionContentHeight();
-    this._accordionContentStyleController.height = '0px';
   }
 
   private setAccordionContentHeight() {
+    this._accordionButtonIconClassController['--on'] = false;
+    this._accordionContentStyleController.height = '0px';
+
     try {
       this._accordionContentInitialHeight = getComputedStyle(
         this.accordionContentRef.nativeElement
