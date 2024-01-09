@@ -1,0 +1,18 @@
+<div class="father">
+      <div *ngIf="inputType !== 'textarea'">
+            <button *ngIf="inputType === 'password'" type="button" (click)="onEyeButtonClick()">
+                  <i class="{{ showPasswordButtonController.icon }}"></i>
+            </button>
+            <input type="{{ model.type }}" name="{{ model.name }}" id="{{ inputId }}"
+                  placeholder="{{ model.placeholder }}">
+            <label for="{{ inputId }}">
+                  {{ model.placeholder }}
+            </label>
+      </div>
+      <div *ngIf="inputType === 'textarea'">
+            <textarea name="{{ model.name }}" id="{{ inputId }}" placeholder="{{ model.placeholder }}"></textarea>
+            <label for="{{ inputId }}">
+                  {{ model.placeholder }}
+            </label>
+      </div>
+</div>

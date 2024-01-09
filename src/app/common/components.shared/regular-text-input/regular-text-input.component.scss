@@ -1,0 +1,84 @@
+div.father {
+  position: relative;
+
+  button {
+    font-size: 26px;
+    padding-left: 8px;
+    background-color: var(--secondary-color);
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 16px;
+  }
+
+  label {
+    pointer-events: none;
+    padding: 0px 8px;
+    background-color: var(--secondary-color);
+    color: var(--gray);
+    transition: ease-in-out 0.26s;
+    font-size: 18px;
+    position: absolute;
+    top: 16px;
+    left: 14px;
+  }
+
+  textarea {
+      min-width: 100%;
+      max-width: 100%;
+      min-height: 100px;
+      height: 200px;
+      max-height: 400px;
+  }
+
+  textarea,
+  input {
+    color: var(--primary-color);
+    padding: 14px 16px;
+    width: 100%;
+    border-radius: var(--regular-border-radius);
+    border: var(--regular-border-size) solid var(--primary-color);
+    background-color: var(--secondary-color);
+    font-size: 18px;
+
+    &:focus + label,
+    &:-webkit-autofill + label,
+    &:not(:placeholder-shown) + label {
+      color: var(--primary-color);
+      font-size: 12px;
+      transform: translate(6px, -24px);
+    }
+
+    &:focus {
+      outline: none;
+      border: 2px solid var(--primary-color);
+    }
+
+    &::placeholder {
+      filter: opacity(0%);
+    }
+
+    &::-webkit-input-placeholder {
+      color: transparent;
+    }
+
+    &:-moz-placeholder {
+      color: transparent;
+    }
+
+    &::-moz-placeholder {
+      color: transparent;
+    }
+
+    &:-ms-input-placeholder {
+      color: transparent;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
+}

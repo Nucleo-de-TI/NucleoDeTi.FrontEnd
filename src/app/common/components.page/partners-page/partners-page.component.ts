@@ -6,6 +6,7 @@ import { HomePageHeaderService } from '../../services/homePageHeader/home-page-h
 import { HomePageFooterService } from '../../services/homePageFooter/home-page-footer.service';
 import { ParceirosDoNucleoComponent } from "./components.internal/parceiros-do-nucleo/parceiros-do-nucleo.component";
 import { NossosParceirosComponent } from "./components.internal/nossos-parceiros/nossos-parceiros.component";
+import { ContatoComponent } from "./components.internal/contato/contato.component";
 
 @Component({
     selector: 'app-partners-page',
@@ -17,7 +18,8 @@ import { NossosParceirosComponent } from "./components.internal/nossos-parceiros
         RegularFooterComponent,
         RegularMainComponent,
         ParceirosDoNucleoComponent,
-        NossosParceirosComponent
+        NossosParceirosComponent,
+        ContatoComponent
     ]
 })
 export class PartnersPageComponent {
