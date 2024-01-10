@@ -23,7 +23,6 @@ export class ContatoComponent {
           name: 'email',
           placeholder: 'E-mail',
           type: 'text',
-          value: '',
         },
       ],
       [
@@ -31,7 +30,6 @@ export class ContatoComponent {
           name: 'message',
           placeholder: 'Mensagem',
           type: 'textarea',
-          value: '',
         },
       ],
     ],
