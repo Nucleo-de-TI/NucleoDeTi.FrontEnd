@@ -1,18 +1,32 @@
 <div class="father">
-      <div *ngIf="inputType !== 'textarea'">
-            <button *ngIf="inputType === 'password'" type="button" (click)="onEyeButtonClick()">
-                  <i class="{{ showPasswordButtonController.icon }}"></i>
-            </button>
-            <input type="{{ model.type }}" name="{{ model.name }}" id="{{ inputId }}"
-                  placeholder="{{ model.placeholder }}">
-            <label for="{{ inputId }}">
-                  {{ model.placeholder }}
-            </label>
+      <div *ngIf="inputType !== 'textarea'" [ngClass]="{ '--error': model.errorMessage !== undefined && model.errorMessage !== '' }">
+            <div class="father__input">
+                  <button *ngIf="inputType === 'password'" type="button" (click)="onEyeButtonClick()">
+                        <i class="{{ showPasswordButtonController.icon }}"></i>
+                  </button>
+                  <input type="{{ model.type }}" name="{{ model.name }}" id="{{ inputId }}"
+                        placeholder="{{ model.placeholder }}" value="{{ model.value }}" [(ngModel)]="model.value"
+                        (input)="onInput()">
+                  <label for="{{ inputId }}">
+                        {{ model.placeholder }}
+                  </label>
+            </div>
+            <span *ngIf="model.errorMessage" class="father__error-message">
+                  <i class="bi bi-exclamation-circle-fill"></i>
+                  {{ model.errorMessage }}
+            </span>
       </div>
-      <div *ngIf="inputType === 'textarea'">
-            <textarea name="{{ model.name }}" id="{{ inputId }}" placeholder="{{ model.placeholder }}"></textarea>
-            <label for="{{ inputId }}">
-                  {{ model.placeholder }}
-            </label>
+      <div *ngIf="inputType === 'textarea'" [ngClass]="{ '--error': model.errorMessage !== undefined && model.errorMessage !== '' }">
+            <div class="father__input">
+                  <textarea name="{{ model.name }}" id="{{ inputId }}" placeholder="{{ model.placeholder }}"
+                        value="{{ model.value }}" [(ngModel)]="model.value" (input)="onInput()"></textarea>
+                  <label for="{{ inputId }}">
+                        {{ model.placeholder }}
+                  </label>
+            </div>
+            <span *ngIf="model.errorMessage" class="father__error-message">
+                  <i class="bi bi-exclamation-circle-fill"></i>
+                  {{ model.errorMessage }}
+            </span>
       </div>
 </div>

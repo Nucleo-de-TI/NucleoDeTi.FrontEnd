@@ -29,7 +29,7 @@ export class BorderTextLinkComponent implements OnInit {
   };
 
   ngOnInit(): void {
-    if (this.model && this.model.style.filled) {
+    if (this.model && this.model.style && this.model.style.filled) {
       this._linkClassController['--filled'] = this.model.style.filled;
     }
   }

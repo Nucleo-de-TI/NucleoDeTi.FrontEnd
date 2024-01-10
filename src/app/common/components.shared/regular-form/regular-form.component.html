@@ -1,5 +1,5 @@
 <div class="father">
-      <form>
+      <form (submit)="onSubmit($event)">
             <app-regular-flex-box
                   [model]="{ style: { 'align-items': 'center', 'justify-content': 'center', 'flex-direction': 'column', 'gap': '28px' } }">
                   <div *ngFor="let inputRow of model.inputs" class="father__row">
@@ -29,6 +29,11 @@
                                     </div>
                               </div>
                         </app-regular-flex-box>
+                  </div>
+                  <div class="father__row">
+                        <app-border-text-load-button [model]="{ loading: loadButtonController.isLoading }">
+                              {{ model.submitButton.innerText }}
+                        </app-border-text-load-button>
                   </div>
             </app-regular-flex-box>
       </form>

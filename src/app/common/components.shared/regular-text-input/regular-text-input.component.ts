@@ -1,16 +1,18 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IRegularFormInput } from '../../models/regular-form/regular-form';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { IRegularTextInput } from '../../models/regular-text-input/regular-text-input';
+import { RegularTextComponent } from '../regular-text/regular-text.component';
 
 @Component({
   selector: 'app-regular-text-input',
   standalone: true,
-  imports: [CommonModule],
   templateUrl: './regular-text-input.component.html',
   styleUrl: './regular-text-input.component.scss',
+  imports: [CommonModule, FormsModule, RegularTextComponent],
 })
 export class RegularTextInputComponent implements OnInit {
-  @Input() model!: IRegularFormInput;
+  @Input() model!: IRegularTextInput;
   private _inputType!: string;
   private _inputId: string;
   private _showPasswordButtonController = {
@@ -35,7 +37,13 @@ export class RegularTextInputComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._inputType = JSON.parse(JSON.stringify(this.model)).type
+    this._inputType = JSON.parse(JSON.stringify(this.model)).type;
+  }
+
+  onInput() {
+    if (this.model.errorMessage) {
+      this.model.errorMessage = undefined;
+    }
   }
 
   onEyeButtonClick() {

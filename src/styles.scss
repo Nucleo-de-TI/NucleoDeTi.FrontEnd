@@ -3,6 +3,7 @@
   --light-blue: rgb(55, 55, 243);
   --blue: #161d43;
   --yellow: #fbed21;
+  --red: red;
   --black-translucent-effect: rgba(0, 0, 0, 0.315);
 
   --primary-color: #161d43;
@@ -28,6 +29,7 @@
 
   &::-webkit-scrollbar-track {
     background-color: var(--secondary-color);
+    border-radius: var(--regular-border-radius);
   }
 
   padding: 0px;

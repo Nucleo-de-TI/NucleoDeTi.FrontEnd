@@ -1,16 +1,11 @@
-export interface IRegularFormInput {
-      name: string;
-      type: string;
-      value: string;
-      placeholder: string;
-}
+import { IRegularTextInput } from "../regular-text-input/regular-text-input";
 
 export interface IRegularFormSubmitButton {
       innerText: string;
-      callback: () => void;
+      callback: () => Promise<void>;
 }
 
 export interface IRegularForm {
-      inputs: IRegularFormInput[][]
+      inputs: IRegularTextInput[][]
       submitButton: IRegularFormSubmitButton;
 }
