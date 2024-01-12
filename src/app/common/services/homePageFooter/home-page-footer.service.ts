@@ -18,19 +18,15 @@ export class HomePageFooterService {
     ],
     links: [
       {
-        href: '#',
+        href: 'https://www.facebook.com/nucleodetiuniso/',
         icon: 'bi bi-facebook',
       },
       {
-        href: '#',
+        href: 'https://www.instagram.com/nucleodeti_uniso/',
         icon: 'bi bi-instagram',
       },
       {
-        href: '#',
-        icon: 'bi bi-linkedin',
-      },
-      {
-        href: '#',
+        href: 'mailto:nucleodeti.uniso@gmail.com',
         icon: 'bi bi-envelope-at',
       },
     ],

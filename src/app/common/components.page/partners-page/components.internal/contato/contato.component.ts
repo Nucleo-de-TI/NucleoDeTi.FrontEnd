@@ -35,7 +35,10 @@ export class ContatoComponent {
     ],
     submitButton: {
       innerText: 'Enviar',
-      callback: async () => {},
+      callback: async () => {
+        await new Promise((resolve) => setTimeout(() => resolve(true), 5000))
+        this.formModel.inputs[1][0].errorMessage = "Por favor utilize no máximo 256 characteres!"
+      },
     },
   };
 }
