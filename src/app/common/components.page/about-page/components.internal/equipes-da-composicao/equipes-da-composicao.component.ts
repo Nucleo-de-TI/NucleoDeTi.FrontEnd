@@ -31,7 +31,7 @@ export class EquipesDaComposicaoComponent {
     {
       title: {
         innerText: 'Cordenadores',
-        icon: 'bi bi-alarm',
+        icon: 'bi bi-people-fill',
       },
       list: [
         'Professor Mestre Richardson Kennedy Luz;',
@@ -41,7 +41,7 @@ export class EquipesDaComposicaoComponent {
     {
       title: {
         innerText: 'Administrativo',
-        icon: 'bi bi-alarm',
+        icon: 'bi bi-table',
       },
       list: [
         'Desenvolvimento do Manual do aluno do curso;',
@@ -51,21 +51,28 @@ export class EquipesDaComposicaoComponent {
     {
       title: {
         innerText: 'Desenvolvimento',
-        icon: 'bi bi-alarm',
+        icon: 'bi bi-laptop',
       },
       list: ['Desenvolver e manter atualizado o manual do aluno virtual.'],
     },
     {
       title: {
         innerText: 'Design',
-        icon: 'bi bi-alarm',
+        icon: 'bi bi-palette',
       },
       list: ['Criação de imagens;', 'Obtenção de artes para os eventos.'],
     },
     {
       title: {
+        innerText: 'Games',
+        icon: 'bi bi-controller',
+      },
+      list: ['Criar equipes para treinar e participar de campeonatos'],
+    },
+    {
+      title: {
         innerText: 'Eventos',
-        icon: 'bi bi-alarm',
+        icon: 'bi bi-calendar',
       },
       list: [
         'Recepcionar e organizar o evento e convite as empresas;',
@@ -76,7 +83,7 @@ export class EquipesDaComposicaoComponent {
     {
       title: {
         innerText: 'Mídias Sociais',
-        icon: 'bi bi-alarm',
+        icon: 'bi bi-phone',
       },
       list: [
         'Cuidar do engajamento e criação de conteúdo para o Facebook, Instagram e LinkedIn;',
@@ -86,7 +93,7 @@ export class EquipesDaComposicaoComponent {
     {
       title: {
         innerText: 'Welcome',
-        icon: 'bi bi-alarm',
+        icon: 'bi bi-emoji-laughing',
       },
       list: [
         'Gerenciar toda a inclusão de novos alunos na Universidade (Manual Acadêmico, e-mail de boas-vindas e entre outros).',
@@ -95,19 +102,12 @@ export class EquipesDaComposicaoComponent {
     {
       title: {
         innerText: 'Ações Sociais',
-        icon: 'bi bi-alarm',
+        icon: 'bi bi-balloon-heart',
       },
       list: [
         'Ações sociais presencialmente e virtuais;',
         'Ações internas e em parcerias com outros cursos, UNISO e Sociedade',
       ],
-    },
-    {
-      title: {
-        innerText: 'Games',
-        icon: 'bi bi-alarm',
-      },
-      list: ['Criar equipes para treinar e participar de campeonatos'],
     },
   ];
 }

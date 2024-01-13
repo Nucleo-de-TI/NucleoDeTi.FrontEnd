@@ -1,10 +1,11 @@
 <app-small-vertical-padding></app-small-vertical-padding>
+<app-small-vertical-padding></app-small-vertical-padding>
 <footer>
   <app-regular-section-box>
     <div class="father">
       <div class="father__content">
         <div class="father__content__brand-image">
-          <app-regular-brand-icon [src]="'./assets/images/brand/icon.blue.png'"></app-regular-brand-icon>
+          <app-regular-nucleo-icon [src]="'./assets/images/brand/icon.blue.png'"></app-regular-nucleo-icon>
         </div>
         <app-regular-list
           [model]="{ style: { 'flex-direction': 'column', 'justify-content': 'center', 'align-items': 'center','list-style': 'none', gap: '8px' } }">
@@ -24,7 +25,7 @@
         <div class="father__content__link-list">
           <app-regular-list [model]="{ style: { 'flex-direction': 'row', 'list-style': 'none', gap: '28px' } }">
             <li *ngFor="let link of model.links">
-              <app-medium-text-link [href]="link.href">
+              <app-medium-text-link [href]="link.href" [target]="'_blank'">
                 <i class="{{ link.icon }}"></i>
               </app-medium-text-link>
             </li>

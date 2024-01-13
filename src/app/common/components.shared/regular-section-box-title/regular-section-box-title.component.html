@@ -1,5 +1,8 @@
-<h2>
-      <app-regular-text [model]="model">
-            <ng-content></ng-content>
-      </app-regular-text>
-</h2>
+<div class="father">
+      <h2>
+            <app-regular-text [model]="model">
+                  <i *ngIf="model && model.icon" class="father__icon {{ model.icon }}"></i>
+                  <ng-content></ng-content>
+            </app-regular-text>
+      </h2>
+</div>

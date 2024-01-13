@@ -1,0 +1,40 @@
+<div class="father">
+      <form (submit)="onSubmit($event)">
+            <app-regular-flex-box
+                  [model]="{ style: { 'align-items': 'center', 'justify-content': 'center', 'flex-direction': 'column', 'gap': '28px' } }">
+                  <div *ngFor="let inputRow of model.inputs" class="father__row">
+                        <app-regular-flex-box [model]="{ 
+                              style: { 
+                                    'align-items': 'center', 
+                                    'justify-content': 'center', 
+                                    'flex-direction': 'column', 
+                                    'gap': '28px' 
+                              },
+                              media: [
+                                    {
+                                          'min-width': 600,
+                                          style: { 
+                                                'align-items': 'center', 
+                                                'justify-content': 'center', 
+                                                'flex-direction': 'row', 
+                                                'gap': '28px' 
+                                          },
+                                    }
+                              ]
+                        }">
+                              <div *ngFor="let input of inputRow" class="father__row__input-container">
+                                    <div
+                                          *ngIf="(input.type === 'text' || input.type === 'password' || input.type === 'email' || input.type === 'textarea')">
+                                          <app-regular-text-input [model]="input"></app-regular-text-input>
+                                    </div>
+                              </div>
+                        </app-regular-flex-box>
+                  </div>
+                  <div class="father__row">
+                        <app-border-text-load-button [model]="{ loading: loadButtonController.isLoading }">
+                              {{ model.submitButton.innerText }}
+                        </app-border-text-load-button>
+                  </div>
+            </app-regular-flex-box>
+      </form>
+</div>

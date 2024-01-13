@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  HostListener,
   Input,
   Renderer2,
   ViewChild,
@@ -46,12 +47,23 @@ export class RegularAccordionComponent implements AfterViewInit {
     return this._accordionButtonIconClassController;
   }
 
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.setAccordionContentHeight();
+  }
+
   ngAfterViewInit() {
+    this.setAccordionContentHeight();
+  }
+
+  private setAccordionContentHeight() {
+    this._accordionButtonIconClassController['--on'] = false;
+    this._accordionContentStyleController.height = '0px';
+
     try {
       this._accordionContentInitialHeight = getComputedStyle(
         this.accordionContentRef.nativeElement
       ).getPropertyValue('height');
-      this._accordionContentStyleController.height = '0px';
     } catch (err: any) {
       if (err.name !== 'ReferenceError') {
         throw err;

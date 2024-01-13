@@ -29,19 +29,9 @@ export class HomePageHeaderService {
           innerText: 'Eventos',
         },
         {
-          href: '#',
+          href: 'partners',
           icon: 'bi bi-people-fill',
           innerText: 'Parceiros',
-        },
-        {
-          href: '#',
-          icon: 'bi bi-bookmark-check',
-          innerText: 'Projetos',
-        },
-        {
-          href: '#',
-          icon: 'bi bi-file-earmark-person',
-          innerText: 'Currículos',
         },
       ],
     },

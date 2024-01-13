@@ -1,7 +1,7 @@
 import { Component, HostListener, Input } from '@angular/core';
 import { SmallVerticalPaddingComponent } from '../../components.shared/small-vertical-padding/small-vertical-padding.component';
-import { RegularBrandLogoComponent } from '../../components.shared/regular-brand-logo/regular-brand-logo.component';
-import { RegularBrandIconComponent } from '../../components.shared/regular-brand-icon/regular-brand-icon.component';
+import { RegularNucleoLogoComponent } from '../../components.shared/regular-nucleo-logo/regular-nucleo-logo.component';
+import { RegularNucleoIconComponent } from '../../components.shared/regular-nucleo-icon/regular-nucleo-icon.component';
 import { BigTextButtonComponent } from '../../components.shared/big-text-button/big-text-button.component';
 import { RegularListComponent } from '../../components.shared/regular-list/regular-list.component';
 import { IRegularFlexBox } from '../../models/regular-flex-box/regular-flex-box';
@@ -22,8 +22,8 @@ import { RegularHorizontalPaddingComponent } from '../../components.shared/regul
   imports: [
     CommonModule,
     SmallVerticalPaddingComponent,
-    RegularBrandLogoComponent,
-    RegularBrandIconComponent,
+    RegularNucleoLogoComponent,
+    RegularNucleoIconComponent,
     BigTextButtonComponent,
     RegularListComponent,
     AnimatedTextLinkComponent,

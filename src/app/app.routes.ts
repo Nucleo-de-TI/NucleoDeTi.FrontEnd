@@ -4,6 +4,7 @@ import { AboutPageComponent } from './common/components.page/about-page/about-pa
 import { CoursesPageComponent } from './common/components.page/courses-page/courses-page.component';
 import { StudentGuidPageComponent } from './common/components.page/student-guid-page/student-guid-page.component';
 import { EventsPageComponent } from './common/components.page/events-page/events-page.component';
+import { PartnersPageComponent } from './common/components.page/partners-page/partners-page.component';
 
 export const routes: Routes = [
   {
@@ -25,5 +26,9 @@ export const routes: Routes = [
   {
     path: 'events',
     component: EventsPageComponent
+  },
+  {
+    path: "partners",
+    component: PartnersPageComponent
   }
 ];

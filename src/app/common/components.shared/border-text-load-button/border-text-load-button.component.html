@@ -1,0 +1,12 @@
+<div class="father">
+      <div class="father__button" [ngClass]="{ '--loading': model.loading}">
+            <app-border-text-button (click)="onClick($event)">
+                  <app-medium-text>
+                        <span class="father__button__load-icon">
+                              <i class="bi bi-arrow-clockwise"></i>
+                        </span>
+                  </app-medium-text>
+                  <ng-content></ng-content>
+            </app-border-text-button>
+      </div>
+</div>

@@ -5,8 +5,7 @@
         <app-regular-section-box-title>
           Projetos para parceiros
         </app-regular-section-box-title>
-        <app-regular-flex-box
-          [model]="{
+        <app-regular-flex-box [model]="{
             style: {
               'flex-direction': 'column',
               'justify-content': 'center',
@@ -24,44 +23,21 @@
                 }
               }
             ]
-          }"
-        >
-          <div class="father__projetos-para-parceiros__box">
+          }">
+          <div *ngFor="let card of cards" class="father__projetos-para-parceiros__box">
             <app-small-section-box>
-              <app-regular-flex-box
-                [model]="{
+              <app-regular-flex-box [model]="{
                   style: {
                     'flex-direction': 'column',
                     'justify-content': 'center',
                     'align-items': 'center',
                     gap: '42px'
                   }
-                }"
-              >
-                <h3>Serviços do núcleo</h3>
-                <p>Para cursos dentro da universidade</p>
-                <app-regular-text-link [href]="'#'">
-                  Veja mais >
-                </app-regular-text-link>
-              </app-regular-flex-box>
-            </app-small-section-box>
-          </div>
-          <div class="father__projetos-para-parceiros__box">
-            <app-small-section-box>
-              <app-regular-flex-box
-                [model]="{
-                  style: {
-                    'flex-direction': 'column',
-                    'justify-content': 'center',
-                    'align-items': 'center',
-                    gap: '42px'
-                  }
-                }"
-              >
-                <h3>Externos</h3>
-                <p>Para parceiros fora da universidade</p>
-                <app-regular-text-link [href]="'#'">
-                  Veja mais >
+                }">
+                <h3> {{ card.title }} </h3>
+                <p> {{ card.text }} </p>
+                <app-regular-text-link [href]="card.link.url">
+                  {{ card.link.text }}
                 </app-regular-text-link>
               </app-regular-flex-box>
             </app-small-section-box>

@@ -3,5 +3,5 @@ export interface IStyle {
 }
 
 export interface IBorderTextButton {
-  style: IStyle;
+  style?: IStyle;
 }

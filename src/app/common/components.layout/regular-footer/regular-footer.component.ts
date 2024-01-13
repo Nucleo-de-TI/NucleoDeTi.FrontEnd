@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { RegularVerticalPaddingComponent } from '../../components.shared/regular-vertical-padding/regular-vertical-padding.component';
-import { RegularBrandIconComponent } from '../../components.shared/regular-brand-icon/regular-brand-icon.component';
+import { RegularNucleoIconComponent } from '../../components.shared/regular-nucleo-icon/regular-nucleo-icon.component';
 import { BigTextComponent } from '../../components.shared/big-text/big-text.component';
 import { RegularTextComponent } from '../../components.shared/regular-text/regular-text.component';
-import { RegularBrandLogoComponent } from '../../components.shared/regular-brand-logo/regular-brand-logo.component';
+import { RegularNucleoLogoComponent } from '../../components.shared/regular-nucleo-logo/regular-nucleo-logo.component';
 import { RegularUnisoIconComponent } from '../../components.shared/regular-uniso-icon/regular-uniso-icon.component';
 import { IRegularFooter } from '../../models/regular-footer/regular-footer';
 import { RegularListComponent } from '../../components.shared/regular-list/regular-list.component';
@@ -23,10 +23,10 @@ import { SmallVerticalPaddingComponent } from "../../components.shared/small-ver
     imports: [
         CommonModule,
         RegularVerticalPaddingComponent,
-        RegularBrandIconComponent,
+        RegularNucleoIconComponent,
         BigTextComponent,
         RegularTextComponent,
-        RegularBrandLogoComponent,
+        RegularNucleoLogoComponent,
         RegularUnisoIconComponent,
         RegularListComponent,
         MediumTextLinkComponent,

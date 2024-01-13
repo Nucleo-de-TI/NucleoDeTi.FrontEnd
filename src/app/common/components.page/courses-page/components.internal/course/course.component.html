@@ -1,14 +1,11 @@
 <div class="father">
       <app-regular-vertical-padding>
             <app-regular-horizontal-padding>
-                  <app-small-vertical-padding>
-                        <div class="father__title">
-                              <app-regular-section-box-title>
-                                    <i class="father__title__icon {{ model.title.icon }}"></i>
-                                    {{ model.title.innerText }}
-                              </app-regular-section-box-title>
-                        </div>
-                  </app-small-vertical-padding>
+                  <div class="father__title">
+                        <app-regular-section-box-title [model]="{ icon: model.title.icon }">
+                              {{ model.title.innerText }}
+                        </app-regular-section-box-title>
+                  </div>
             </app-regular-horizontal-padding>
             <div class="father__info-text">
                   <app-regular-section-box>
@@ -42,20 +39,19 @@
                         </app-regular-flex-box>
                   </app-regular-section-box>
             </div>
+            <app-small-vertical-padding></app-small-vertical-padding>
             <app-regular-horizontal-padding>
-                  <app-regular-vertical-padding>
-                        <div class="father__accordion" *ngFor="let accordion of model.accordions">
-                              <app-regular-accordion [model]="{ title: accordion.title }">
-                                    <app-regular-list
-                                          [model]="{ style: { 'align-items': 'start', 'justify-content': 'start', 'flex-direction': 'column', 'gap': '8px' } }">
-                                          <li *ngFor="let item of accordion.list">
-                                                {{ item }}
-                                          </li>
-                                    </app-regular-list>
-                              </app-regular-accordion>
-                              <hr>
-                        </div>
-                  </app-regular-vertical-padding>
+                  <div class="father__accordion" *ngFor="let accordion of model.accordions">
+                        <app-regular-accordion [model]="{ title: accordion.title }">
+                              <app-regular-list
+                                    [model]="{ style: { 'align-items': 'start', 'justify-content': 'start', 'flex-direction': 'column', 'gap': '8px' } }">
+                                    <li *ngFor="let item of accordion.list">
+                                          {{ item }}
+                                    </li>
+                              </app-regular-list>
+                        </app-regular-accordion>
+                        <hr>
+                  </div>
             </app-regular-horizontal-padding>
       </app-regular-vertical-padding>
 </div>

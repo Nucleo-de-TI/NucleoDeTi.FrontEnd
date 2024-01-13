@@ -1,8 +1,19 @@
-h2 {
-  font-size: 30px;
+div.father {
   padding-bottom: 28px;
 
   @media (min-width: 600px) {
     padding-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+
+    i.father__icon {
+      display: none;
+
+      @media (min-width: 600px) {
+        display: initial;
+      }
+    }
   }
 }
