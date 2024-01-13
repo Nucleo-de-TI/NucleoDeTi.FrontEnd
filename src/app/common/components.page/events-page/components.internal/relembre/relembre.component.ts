@@ -21,11 +21,11 @@ export class RelembreComponent {
     [
       {
         title: 'Jornada Acadêmica 2022',
-        img: './assets/images/general/dlhugvtewzeh.png',
+        img: './assets/images/general/ddyxjjjuyu.png',
       },
       {
         title: 'Welcome 2023/01',
-        img: './assets/images/general/dlhugvtewzeh.png',
+        img: './assets/images/general/yvymuvkvyo.png',
       },
       {
         title: 'Dia internacional da Mulher 2023',
@@ -35,15 +35,15 @@ export class RelembreComponent {
     [
       {
         title: 'Jornada Acadêmica 2023',
-        img: './assets/images/general/dlhugvtewzeh.png',
+        img: './assets/images/general/gocstvqqptrr.png',
       },
       {
         title: 'Visita Técnica - Senior Mega',
-        img: './assets/images/general/dlhugvtewzeh.png',
+        img: './assets/images/general/vvxsobsjdy.png',
       },
       {
         title: 'Projeto Integrador 2023/02',
-        img: './assets/images/general/dlhugvtewzeh.png',
+        img: './assets/images/general/udkrbkusok.png',
       },
     ],
   ];

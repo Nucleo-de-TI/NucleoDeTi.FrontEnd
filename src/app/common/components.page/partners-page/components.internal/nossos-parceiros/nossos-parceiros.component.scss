@@ -1,6 +1,8 @@
 div.father__nossos-parceiros {
   color: var(--primary-color);
+  /*
   background-color: var(--quaternary-color);
+  */
 }
 
 div.father__nossos-parceiros__column,
@@ -10,10 +12,15 @@ div.father__nossos-parceiros__column__row__box {
 }
 
 div.father__nossos-parceiros__column__row__box {
+  width: 100%;
   border: var(--regular-border-size) solid var(--primary-color);
   border-radius: var(--regular-border-radius);
 }
 
 div.father__nossos-parceiros__column__row__box__content {
-  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 118px;
 }

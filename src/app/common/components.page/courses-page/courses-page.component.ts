@@ -128,7 +128,7 @@ export class CoursesPageComponent {
         {
           title: 'Base Legal',
           list: [
-            'Início de Funcionamento: 08/02/2010. ',
+            'Início de Funcionamento: 08/02/2010.',
             'Autorização: Resolução Consu 026/2009, publicada em 25/08/2009.',
             'Reconhecimento: Portaria nº 44/2015, publicada no Diário Oficial da União em 23/01/2015.',
             'Renovação de Reconhecimento: Portaria SERES nº 110/2021, publicada no Diário Oficial da União, em 05/02/2021.'
