@@ -1,0 +1,10 @@
+{
+  "routes": [
+    "/",
+    "/about",
+    "/courses",
+    "/events",
+    "/partners",
+    "/student-guide"
+  ]
+}
