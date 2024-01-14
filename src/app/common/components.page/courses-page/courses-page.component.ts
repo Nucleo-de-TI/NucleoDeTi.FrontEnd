@@ -116,7 +116,7 @@ export class CoursesPageComponent {
       ],
       accordions: [
         {
-          title: 'Objetivos do Curso de EC',
+          title: 'Objetivos do Curso de ECP',
           list: [
             'Orientar o graduando para construir sua identidade profissional, com competência e ética, de forma que o capacite a atuar nos diferente cenários da prática profissional;',
             'Proporcionar educação integral para o trabalho multidisciplinar e intersetorial em engenharia e computação;',

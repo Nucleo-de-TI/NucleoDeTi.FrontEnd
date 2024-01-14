@@ -28,15 +28,15 @@ export class GuiaDoAlunoComponent {
   readonly studentGuides = [
     {
       course: 'Análise e Desenvolvimento de Sistemas',
-      downloadLink: '#',
+      downloadLink: 'assets/documents/general/Guia Estudante ADS - UNISO.pdf',
     },
     {
-      course: 'Análise e Desenvolvimento de Sistemas',
-      downloadLink: '#',
+      course: 'Ciência de Dados e Inteligência Artificial',
+      downloadLink: 'assets/documents/general/Guia Estudante CDI  - UNISO.pdf',
     },
     {
-      course: 'Análise e Desenvolvimento de Sistemas',
-      downloadLink: '#',
+      course: 'Engenharia da Computação',
+      downloadLink: 'assets/documents/general/Guia Estudante ECP - UNISO.pdf',
     },
   ];
 }
