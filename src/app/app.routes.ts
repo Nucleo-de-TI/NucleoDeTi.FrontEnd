@@ -9,6 +9,11 @@ import { PartnersPageComponent } from './common/components.page/partners-page/pa
 export const routes: Routes = [
   {
     path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  {
+    path: 'home',
     component: HomePageComponent,
   },
   {
@@ -25,10 +30,10 @@ export const routes: Routes = [
   },
   {
     path: 'events',
-    component: EventsPageComponent
+    component: EventsPageComponent,
   },
   {
-    path: "partners",
-    component: PartnersPageComponent
-  }
+    path: 'partners',
+    component: PartnersPageComponent,
+  },
 ];
