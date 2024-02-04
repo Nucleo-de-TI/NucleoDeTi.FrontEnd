@@ -1,3 +1,44 @@
-div.father__contato {
-      color: var(--primary-color);
+div.father {
+  color: var(--primary-color);
+}
+
+div.father__child {
+  position: relative;
+}
+
+div.father__child__email-sent {
+  &.--on {
+    filter: opacity(100%);
+    pointer-events: all;
+
+    & > div {
+      transform: translateY(0%);
+    }
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--secondary-color);
+  transition: var(--regular-animation-process);
+  filter: opacity(0%);
+  pointer-events: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  & > div {
+    transition: var(--long-animation-process);
+    transform: translateY(50%);
+  }
+}
+
+div.father__child__email-sent__text {
+  max-width: 600px;
+}
+
+div.father__child__email-sent__send-email {
+  min-width: 100%;
 }

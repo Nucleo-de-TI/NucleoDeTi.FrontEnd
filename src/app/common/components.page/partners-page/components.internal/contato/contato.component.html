@@ -1,10 +1,50 @@
-<div class="father">
+<div id="contato" class="father">
       <app-regular-section-box>
-            <div class="father__contato">
-                  <app-regular-section-box-title>
-                        Contato
-                  </app-regular-section-box-title>
-                  <app-regular-form [model]="formModel"></app-regular-form>
+            <div class="father__child">
+                  <div class="father__child__contato">
+                        <app-regular-section-box-title>
+                              Contato
+                        </app-regular-section-box-title>
+                        <app-regular-form [model]="formModel"></app-regular-form>
+                  </div>
+                  <div class="father__child__email-sent" [ngClass]="emailSentClassController">
+                        <div>
+                              <app-regular-flex-box
+                                    [model]="{ style: { 'flex-direction': 'column', 'justify-content': 'center', 'align-items': 'center', gap: '0px' } }">
+                                    <app-regular-section-box-title [model]="{ icon: 'bi bi-check-circle' }">
+                                          Email Enviado
+                                    </app-regular-section-box-title>
+                                    <app-regular-flex-box
+                                          [model]="{ style: { 'flex-direction': 'column', 'justify-content': 'center', 'align-items': 'center', gap: '8px' } }">
+                                          <app-regular-flex-box
+                                                [model]="{ style: { 'flex-direction': 'column', 'justify-content': 'center', 'align-items': 'center', gap: '28px' } }">
+                                                <div class="father__child__email-sent__text">
+                                                      <app-regular-text [model]="{ style: { 'text-align': 'center' } }">
+                                                            Queremos informar que seu email foi enviado e em breve
+                                                            um
+                                                            dos
+                                                            nossos
+                                                            responsáveis entrará em contato para dar continuidade
+                                                            à sua
+                                                            solicitação.
+                                                            Caso haja mais algumas dúvidas, sinta se livre para
+                                                            nos
+                                                            enviar um
+                                                            email
+                                                      </app-regular-text>
+                                                </div>
+                                                <div class="father__child__email-sent__send-email">
+                                                      <app-border-text-link
+                                                            [href]="'mailto:contacto@mail.nucleotiuniso.com.br'"
+                                                            [target]="'_blank'">
+                                                            Enviar Email
+                                                      </app-border-text-link>
+                                                </div>
+                                          </app-regular-flex-box>
+                                    </app-regular-flex-box>
+                              </app-regular-flex-box>
+                        </div>
+                  </div>
             </div>
       </app-regular-section-box>
 </div>

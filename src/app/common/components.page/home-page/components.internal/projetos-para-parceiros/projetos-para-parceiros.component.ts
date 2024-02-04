@@ -8,23 +8,25 @@ import { RegularVerticalPaddingComponent } from '../../../../components.shared/r
 import { BorderTextLinkComponent } from '../../../../components.shared/border-text-link/border-text-link.component';
 import { SmallVerticalPaddingComponent } from '../../../../components.shared/small-vertical-padding/small-vertical-padding.component';
 import { CommonModule } from '@angular/common';
+import { PageTextLinkComponent } from "../../../../components.shared/page-text-link/page-text-link.component";
 
 @Component({
-  selector: 'app-projetos-para-parceiros',
-  standalone: true,
-  templateUrl: './projetos-para-parceiros.component.html',
-  styleUrl: './projetos-para-parceiros.component.scss',
-  imports: [
-    CommonModule,
-    RegularSectionBoxComponent,
-    RegularSectionBoxTitleComponent,
-    RegularFlexBoxComponent,
-    SmallSectionBoxComponent,
-    RegularTextLinkComponent,
-    RegularVerticalPaddingComponent,
-    BorderTextLinkComponent,
-    SmallVerticalPaddingComponent,
-  ],
+    selector: 'app-projetos-para-parceiros',
+    standalone: true,
+    templateUrl: './projetos-para-parceiros.component.html',
+    styleUrl: './projetos-para-parceiros.component.scss',
+    imports: [
+        CommonModule,
+        RegularSectionBoxComponent,
+        RegularSectionBoxTitleComponent,
+        RegularFlexBoxComponent,
+        SmallSectionBoxComponent,
+        RegularTextLinkComponent,
+        RegularVerticalPaddingComponent,
+        BorderTextLinkComponent,
+        SmallVerticalPaddingComponent,
+        PageTextLinkComponent
+    ]
 })
 export class ProjetosParaParceirosComponent {
   readonly cards = [
@@ -32,7 +34,7 @@ export class ProjetosParaParceirosComponent {
       title: 'Internos',
       text: 'Para cursos dentro da universidade',
       link: {
-        text: 'Saiba mais >',
+        text: 'Saiba mais',
         url: `mailto:nucleodeti.uniso@gmail.com?subject=${encodeURIComponent(
           'Parceria entre o Núcleo de TI e Cursos na Uniso'
         )}`,
@@ -42,7 +44,7 @@ export class ProjetosParaParceirosComponent {
       title: 'Externos',
       text: 'Para empresas fora da universidade',
       link: {
-        text: 'Veja mais >',
+        text: 'Veja mais',
         url: '/partners',
       },
     },

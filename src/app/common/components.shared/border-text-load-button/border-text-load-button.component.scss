@@ -1,14 +1,14 @@
 div.father__button {
       &.--loading {
             span.father__button__load-icon {
-                  display: inline;
+                  display: flex;
             }
       }
 }
 
 span.father__button__load-icon {
       display: none;
-      animation: spinner 1s linear forwards infinite;
+      animation: spinner 1s linear forwards infinite !important;
 }
 
 @keyframes spinner {
