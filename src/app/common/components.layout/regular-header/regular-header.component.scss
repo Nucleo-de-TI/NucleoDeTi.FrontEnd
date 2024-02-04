@@ -84,6 +84,7 @@ button.disable-slide-menu-list-tab {
     pointer-events: all;
   }
 
+  z-index: 3;
   width: 100vw;
   height: 100vh;
   background-color: var(--black-translucent-effect);
