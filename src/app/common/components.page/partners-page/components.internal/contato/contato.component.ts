@@ -69,47 +69,39 @@ export class ContatoComponent {
           mensagem: this.formModel.inputs[1][0],
         };
 
-        try {
-          await new Promise((resolve, reject) => {
-            this.partnersService
-              .sendEmail(fields.email.value, fields.mensagem.value)
-              .subscribe(
-                (response) => {
-                  resolve(response);
-                },
-                (err: HttpErrorResponse) => {
-                  reject(err);
+        this.partnersService
+          .sendEmail(fields.email.value, fields.mensagem.value)
+          .subscribe(
+            (_) => {
+              this.emailSentClassController['--on'] = true;
+            },
+            (err: HttpErrorResponse) => {
+              if (err.status === 400) {
+                const response = err.error as IBadRequestResponse;
+                const fieldErr = response.errors[0].field;
+                const fieldErrMessageKeys = Object.keys(
+                  response.errors[0].constraints
+                );
+                const fieldErrMessage =
+                  response.errors[0].constraints[fieldErrMessageKeys[0]];
+
+                if (fieldErr === 'email' || fieldErr === 'mensagem') {
+                  fields[fieldErr].errorMessage = fieldErrMessage;
                 }
-              );
-          });
 
-          this.emailSentClassController['--on'] = true;
-        } catch (err: any) {
-          if (err.status === 400) {
-            const response = err.error as IBadRequestResponse;
-            const fieldErr = response.errors[0].field;
-            const fieldErrMessageKeys = Object.keys(
-              response.errors[0].constraints
-            );
-            const fieldErrMessage =
-              response.errors[0].constraints[fieldErrMessageKeys[0]];
+                return;
+              }
 
-            if (fieldErr === 'email' || fieldErr === 'mensagem') {
-              fields[fieldErr].errorMessage = fieldErrMessage;
+              if (err.status === 429) {
+                fields.email.errorMessage =
+                  'Parece que você fez muitas tentativas de enviar um email para nós. Por favor tente novamente mais tarde';
+                return;
+              }
+
+              fields.email.errorMessage =
+                'Um erro interno ocorreu. Por favor tente novamente mais tarde';
             }
-
-            return;
-          }
-
-          if (err.status === 429) {
-            fields.email.errorMessage =
-              'Parece que você fez muitas tentativas de enviar um email para nós. Por favor tente novamente mais tarde';
-            return;
-          }
-
-          fields.email.errorMessage =
-            'Um erro interno ocorreu. Por favor tente novamente mais tarde';
-        }
+          );
       },
     },
   };

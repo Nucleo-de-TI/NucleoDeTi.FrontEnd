@@ -12,37 +12,69 @@ import { RegularTextButtonComponent } from '../../components.shared/regular-text
 import { MediumTextLinkComponent } from '../../components.shared/medium-text-link/medium-text-link.component';
 import { MediumTextButtonComponent } from '../../components.shared/medium-text-button/medium-text-button.component';
 import { RegularHorizontalPaddingComponent } from '../../components.shared/regular-horizontal-padding/regular-horizontal-padding.component';
-import { RegularSectionBoxComponent } from "../../components.shared/regular-section-box/regular-section-box.component";
+import { RegularSectionBoxComponent } from '../../components.shared/regular-section-box/regular-section-box.component';
+import { Router } from '@angular/router';
 
 @Component({
-    selector: 'app-regular-header',
-    standalone: true,
-    templateUrl: './regular-header.component.html',
-    styleUrl: './regular-header.component.scss',
-    imports: [
-        CommonModule,
-        SmallVerticalPaddingComponent,
-        RegularNucleoLogoComponent,
-        RegularNucleoIconComponent,
-        BigTextButtonComponent,
-        RegularListComponent,
-        AnimatedTextLinkComponent,
-        RegularTextLinkComponent,
-        RegularTextButtonComponent,
-        MediumTextLinkComponent,
-        MediumTextButtonComponent,
-        RegularHorizontalPaddingComponent,
-        RegularSectionBoxComponent,
-    ]
+  selector: 'app-regular-header',
+  standalone: true,
+  templateUrl: './regular-header.component.html',
+  styleUrl: './regular-header.component.scss',
+  imports: [
+    CommonModule,
+    SmallVerticalPaddingComponent,
+    RegularNucleoLogoComponent,
+    RegularNucleoIconComponent,
+    BigTextButtonComponent,
+    RegularListComponent,
+    AnimatedTextLinkComponent,
+    RegularTextLinkComponent,
+    RegularTextButtonComponent,
+    MediumTextLinkComponent,
+    MediumTextButtonComponent,
+    RegularHorizontalPaddingComponent,
+    RegularSectionBoxComponent,
+  ],
 })
 export class RegularHeaderComponent {
-  @Input() model!: IRegularHeader;
+  private lastScrollTop = 0;
+  private _fatherClassController = {
+    '--off': false,
+  };
   private _slideMenuClassController = {
     '--on': false,
   };
 
+  @Input() model!: IRegularHeader;
+
+  constructor(private router: Router) {}
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(_: Event) {
+    if (!this.router.url.includes('#')) {
+      return;
+    }
+
+    const currentScrollTop =
+      window.pageYOffset || document.documentElement.scrollTop;
+
+    if (!this._slideMenuClassController['--on']) {
+      if (currentScrollTop > this.lastScrollTop) {
+        this._fatherClassController['--off'] = true;
+      } else {
+        this._fatherClassController['--off'] = false;
+      }
+    }
+
+    this.lastScrollTop = currentScrollTop;
+  }
+
   get slideMenuClassController() {
     return this._slideMenuClassController;
+  }
+
+  get fatherClassController() {
+    return this._fatherClassController;
   }
 
   onSlideMenuButtonClick() {

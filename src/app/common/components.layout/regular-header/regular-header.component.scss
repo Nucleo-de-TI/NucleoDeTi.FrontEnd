@@ -13,6 +13,10 @@ header {
 }
 
 div.father {
+  &.--off {
+    transform: translateY(-100%);
+  }
+
   transition: var(--regular-animation-process);
   position: relative;
 }
