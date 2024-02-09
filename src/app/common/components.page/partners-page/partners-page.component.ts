@@ -4,23 +4,24 @@ import { RegularFooterComponent } from '../../components.layout/regular-footer/r
 import { RegularMainComponent } from '../../components.shared/regular-main/regular-main.component';
 import { HomePageHeaderService } from '../../services/homePageHeader/home-page-header.service';
 import { HomePageFooterService } from '../../services/homePageFooter/home-page-footer.service';
-import { ParceirosDoNucleoComponent } from "./components.internal/parceiros-do-nucleo/parceiros-do-nucleo.component";
-import { NossosParceirosComponent } from "./components.internal/nossos-parceiros/nossos-parceiros.component";
-import { ContatoComponent } from "./components.internal/contato/contato.component";
+import { ParceirosDoNucleoComponent } from './components.internal/parceiros-do-nucleo/parceiros-do-nucleo.component';
+import { NossosParceirosComponent } from './components.internal/nossos-parceiros/nossos-parceiros.component';
+import { ContatoComponent } from './components.internal/contato/contato.component';
+import { PartnersService } from '../../services/partners/partners.service';
 
 @Component({
-    selector: 'app-partners-page',
-    standalone: true,
-    templateUrl: './partners-page.component.html',
-    styleUrl: './partners-page.component.scss',
-    imports: [
-        RegularHeaderComponent,
-        RegularFooterComponent,
-        RegularMainComponent,
-        ParceirosDoNucleoComponent,
-        NossosParceirosComponent,
-        ContatoComponent
-    ]
+  selector: 'app-partners-page',
+  standalone: true,
+  templateUrl: './partners-page.component.html',
+  styleUrl: './partners-page.component.scss',
+  imports: [
+    RegularHeaderComponent,
+    RegularFooterComponent,
+    RegularMainComponent,
+    ParceirosDoNucleoComponent,
+    NossosParceirosComponent,
+    ContatoComponent,
+  ],
 })
 export class PartnersPageComponent {
   readonly homePageHeaderService = new HomePageHeaderService();

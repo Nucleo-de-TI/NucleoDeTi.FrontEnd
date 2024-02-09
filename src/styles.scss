@@ -1,9 +1,11 @@
 :root {
   --gray: rgb(87, 87, 87);
   --light-blue: rgb(55, 55, 243);
+  --green: green;
   --blue: #161d43;
   --yellow: #fbed21;
   --red: red;
+
   --black-translucent-effect: rgba(0, 0, 0, 0.315);
 
   --primary-color: #161d43;
@@ -13,7 +15,9 @@
 
   --regular-border-size: 2px;
   --regular-border-radius: 8px;
+
   --regular-animation-process: ease-in-out 0.35s;
+  --long-animation-process: ease-in-out 0.8s;
 }
 
 * {

@@ -13,7 +13,6 @@ import { CommonModule } from '@angular/common';
 export class RegularTextLinkComponent implements OnInit {
   @Input() href?: string;
   @Input() target?: string;
-  @Input() download?: boolean;
   @Input() model?: IRegularLink;
   linkClassController = {
     '--blue': false,

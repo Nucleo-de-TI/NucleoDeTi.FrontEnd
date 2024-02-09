@@ -16,6 +16,7 @@ import { HomePageHeaderService } from '../../services/homePageHeader/home-page-h
 import { HomePageFooterService } from '../../services/homePageFooter/home-page-footer.service';
 import { VestibularComponent } from "./components.internal/vestibular/vestibular.component";
 import { WelcomeImageComponent } from "./components.internal/welcome-image/welcome-image.component";
+import { BorderTextLoadButtonComponent } from "../../components.shared/border-text-load-button/border-text-load-button.component";
 
 @Component({
     selector: 'app-home-page',
@@ -37,7 +38,8 @@ import { WelcomeImageComponent } from "./components.internal/welcome-image/welco
         ProjetosParaParceirosComponent,
         JornadaAcademicaComponent,
         VestibularComponent,
-        WelcomeImageComponent
+        WelcomeImageComponent,
+        BorderTextLoadButtonComponent
     ]
 })
 export class HomePageComponent {

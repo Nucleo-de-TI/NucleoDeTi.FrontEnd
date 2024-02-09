@@ -1,6 +1,6 @@
-<span class="adjust-to-header-height"></span>
+<span class="header-height"></span>
 <header>
-  <div class="father">
+  <div class="father" [ngClass]="fatherClassController">
     <div class="father__action-tab">
       <app-regular-horizontal-padding>
         <app-small-vertical-padding>
@@ -17,20 +17,15 @@
               </app-big-text-button>
             </div>
             <div class="father__action-tab__content__link-list">
-              <app-regular-list
-                [model]="{
+              <app-regular-list [model]="{
                   style: {
                     'flex-direction': 'row',
                     'list-style': 'none',
                     gap: '42px'
                   }
-                }"
-              >
+                }">
                 <li *ngFor="let link of model.action.links">
-                  <app-animated-text-link
-                    [href]="link.href"
-                    [model]="{ selected: link.selected ? true : false }"
-                  >
+                  <app-animated-text-link [href]="link.href" [model]="{ selected: link.selected ? true : false }">
                     {{ link.innerText }}
                   </app-animated-text-link>
                 </li>
@@ -40,14 +35,10 @@
         </app-small-vertical-padding>
       </app-regular-horizontal-padding>
     </div>
-    <div
-      class="father__slide-menu-list-tab"
-      [ngClass]="slideMenuClassController"
-    >
+    <div class="father__slide-menu-list-tab" [ngClass]="slideMenuClassController">
       <app-regular-horizontal-padding>
         <app-small-vertical-padding>
-          <app-regular-list
-            [model]="{
+          <app-regular-list [model]="{
               style: {
                 'flex-direction': 'column',
                 'justify-content': 'center',
@@ -55,8 +46,7 @@
                 'align-items': 'start',
                 gap: '28px'
               }
-            }"
-          >
+            }">
             <li *ngFor="let link of model.action.links">
               <app-regular-text-link [href]="link.href">
                 <i class="{{ link.icon }}"></i>
@@ -69,8 +59,5 @@
     </div>
   </div>
 </header>
-<button
-  class="disable-slide-menu-list-tab"
-  [ngClass]="slideMenuClassController"
-  (click)="onSlideMenuButtonClick()"
-></button>
+<button class="disable-slide-menu-list-tab" [ngClass]="slideMenuClassController"
+  (click)="onSlideMenuButtonClick()"></button>

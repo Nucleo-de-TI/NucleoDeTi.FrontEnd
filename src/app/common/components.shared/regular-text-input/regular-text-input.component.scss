@@ -83,11 +83,10 @@ div.father__input {
 
 span.father__error-message {
   display: flex;
-  align-items: center;
   justify-content: left;
-  gap: 4px;
+  gap: 8px;
   font-size: 13.4px;
-  padding: 4px 0px 0px 14px;
+  padding: 12px 4px;
   color: var(--red);
 }
 
