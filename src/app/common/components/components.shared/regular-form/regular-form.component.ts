@@ -32,6 +32,10 @@ export class RegularFormComponent {
   }
 
   async onSubmit(event: Event) {
+    if (this._loadButtonController.isLoading) {
+      return;
+    }
+
     event.preventDefault();
 
     this._loadButtonController.isLoading = true;
