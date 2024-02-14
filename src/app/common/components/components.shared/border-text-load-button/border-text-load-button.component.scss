@@ -8,15 +8,22 @@ div.father__button {
 
 span.father__button__load-icon {
       display: none;
+      transform: translateY(2.4px);
       animation: spinner 1s linear forwards infinite !important;
+
+      i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+      }
 }
 
 @keyframes spinner {
       from {
-            transform: rotate(0deg);
+            transform: translateY(2.4px) rotate(0deg);
       }
 
       to {
-            transform: rotate(360deg);
+            transform: translateY(2.4px) rotate(360deg);
       }
 }
