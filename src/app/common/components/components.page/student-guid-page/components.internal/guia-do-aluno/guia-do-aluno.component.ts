@@ -28,15 +28,15 @@ export class GuiaDoAlunoComponent {
   readonly studentGuides = [
     {
       course: 'Análise e Desenvolvimento de Sistemas',
-      downloadLink: 'https://nucleodeti-documents.s3.amazonaws.com/guia-do-aluno/Guia_Estudante_ADS_UNISO.pdf',
+      downloadLink: './assets/docs/Guia_Estudante_ADS_UNISO.pdf',
     },
     {
       course: 'Ciência de Dados e Inteligência Artificial',
-      downloadLink: 'https://nucleodeti-documents.s3.amazonaws.com/guia-do-aluno/Guia_Estudante_CDI_UNISO.pdf',
+      downloadLink: './assets/docs/Guia_Estudante_CDI_UNISO.pdf',
     },
     {
       course: 'Engenharia da Computação',
-      downloadLink: 'https://nucleodeti-documents.s3.amazonaws.com/guia-do-aluno/Guia_Estudante_ECP_UNISO.pdf',
+      downloadLink: './assets/docs/Guia_Estudante_ECP_UNISO.pdf',
     },
   ];
 }
