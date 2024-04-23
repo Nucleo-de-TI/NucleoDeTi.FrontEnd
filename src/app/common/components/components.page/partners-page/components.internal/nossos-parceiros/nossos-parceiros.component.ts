@@ -55,7 +55,7 @@ export class NossosParceirosComponent {
           img: './assets/images/general/msjrkojxsj.png',
         },
         {
-          href: 'https://app.escoladesolucoes.com.br/',
+          href: 'https://infoxnet.com.br/',
           img: './assets/images/general/jvvoomdkjy.png',
         },
       ],
