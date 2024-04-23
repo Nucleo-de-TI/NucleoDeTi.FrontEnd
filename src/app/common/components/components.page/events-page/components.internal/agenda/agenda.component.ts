@@ -35,19 +35,19 @@ export class AgendaComponent {
       text: 'Curso extra',
     },
     {
-      date: '11/03 - 22/03',
-      text: 'Preparação e Bootcamp com a Empresa FIT',
+      date: '20/04',
+      text: 'Curso extra',
+    },   
+    {
+      date: '27/04',
+      text: 'Curso extra',
     },
     {
-      date: '20/04',
+      date: '04/05',
       text: 'Curso extra',
     },
     {
       date: '18/05',
-      text: 'Curso extra',
-    },
-    {
-      date: '08/06',
       text: 'Curso extra',
     },
     {
